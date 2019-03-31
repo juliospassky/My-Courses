@@ -10,4 +10,6 @@
 10- Importar mongoose: npm i mongoose --save
 11- Importar o type: npm i @types/mongoose --save --dev
 12- Criar diretório "Models"
-13- Dentro de models criar "newsSchema" verificar no repositório o código
+13- Dentro de "Models" criar "newsSchema" verificar no repositório o código
+14- Criar diretório "Repository"
+15- Dentro de "Repository" criar newsRepository
