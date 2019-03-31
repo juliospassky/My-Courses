@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Variables and JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Upstate CSS Variables with <span class="h1">JS</span></h2>
+
+    <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">Blur:</label>
+        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="rotate">Rotate:</label>
+        <input id="rotate" type="range" name="rotate" min="0" max="360" value="0" data-sizing="deg">
+
+        <label for="base">Base Color:</label>
+        <input id="base" type="color" name="base" value="#F0F0F0">
+    </div>
+
+    <img id='myImage' src="https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
+
+</body>
+
+<script>
+    const inputs = document.querySelectorAll('.controls input');
+    const imagePulse = document.querySelector("img");
+    var temp = 1;
+
+    console.log(imagePulse);
+
+    function handleUpdate() {
+        const suffix = this.dataset.sizing || '';
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+    function pulse() {
+        temp += 0.01;
+        imagePulse.style.transform = `scale(${temp})`;
+        if (temp == 1.1) temp = 1;
+    }
+
+    setInterval(pulse, 1000);
+
+</script>
+
+</html>

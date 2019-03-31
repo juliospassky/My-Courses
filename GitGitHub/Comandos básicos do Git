@@ -1,0 +1,37 @@
+1- No VSCode Abrir uma pasta: File -> Open Folder
+2- Abir o terminal do VSCode: (Ctrl + ') ou View -> Terminal
+
+3- Versionar o Git: git init
+4- Criar usuário do git: git config --global user.name juliocsoft
+5- Configurar o e-mail: git config --global user.email julio@juliocsoft.com
+Obs.: O git pode ser configurado em três níveis diferentes: 
+        Para todos os usuários do computador: --system
+        Para todos os projetos do git: --global
+        Para apenas o projeto local: --local
+        
+6- Ver todas as configurações: git config --global -l
+7- Definir editor para o git: git config --global core.editor notepad++
+
+Nesse ponto o git já está configurado.
+Nota os arquivos no projeto possuem um HashCode (código único) que auxilia na identificação do estado de um determinado arquivo.
+Os estados podem ser untracked, unmodified, modified, staged. 
+http://www.ericmichaelstone.com/wp-content/uploads/2009/10/git_file_status_lifecycle.jpg
+
+8- Criar um arquivo na pasta, digitar um texto e salvar. Esse arquivo vai estar no estado Untracked.
+9- Para confirmar o status do arquivo: git status
+10- Devemos passar o arquivo para o estado Staged: git add arquivo.txt
+11- Confirmar que o arquivo está no estado: git status
+12- Vamos fazer o commit do arquivo com uma mensagem (-m): git commit -m 'Adição do primeiro arquivo'
+13- Alterar o texto do arquivo
+14- Poderemos ver que o arquivo está no estado modificado: git status
+15- Podemos fazer adicionar todos os arquivos modificados (mais comum): git add . 
+16- Fazer o commit do arquivo: git commit -m 'Modificação do primeiro arquivo'
+
+17- Para arquivos que já estão rastreados podemos optar por fazer o commit de forma mais fácil (-am) 
+onde o 'a' significa add e o 'm' de mensagem : git commit -am 'commit das alterações'
+
+18- Podemos ver o histórico de modificações: git log
+19- Para sair do log digitar: q
+
+20- Podemos recuperar o arquivo em estados anteriores com o HashCode(Alterar o HashCode): git checkout 69285e578d1848b02e8e46057a8bb8f36d46a159
+21- Para voltar ao último commit realizado: git checkout master

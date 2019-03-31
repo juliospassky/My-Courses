@@ -1,0 +1,46 @@
+Comandos iniciais
+1- Ao criar um novo repositório é interessante atentar-se ao README, .gitignore e a license.
+  *Uma boa prática sobre o README é descrever pelo menos o motivo da criação do repositório.
+  *Identifique o ambiente de desenvolvimento no .gitignore isso ajuda a não versionar arquivos de log, binários, gerados, etc.
+  *License identifique se o seu projeto necessita aplicar alguma licença.  
+2- Para iniciar o seu projeto é interessante utilizar o clone do GitHub pois já iremos ter o versionamento local (Git) sincronizado com o repositório remoto (Github).
+3- No VSCode abra um terminal (ctrl + ') caminhe até o local onde irá armazenar o código (cd) utilize o comando: git clone @ "substitua o @ pelo link do repositório apresentado no github."
+4- Crie um novo arquivo (teste.txt) e utilize o comando: git add teste.txt
+5- Faça o commit do arquivo: git commit -m "Meu primeiro commit"
+  *Com isso o arquivo será comitado localmente no Git, para enviar o mesmo arquivo para o GitHub deveremos utilizar um comando push
+6- tilize o comando de push: git push
+  *Será apresentado um erro "proposital" pois ainda não temos permissão para enviar o arquivo.
+7- Crie um usuário local no Git com os comandos: 
+   git configure user.name juliocsoft
+   git configure user.email julio@juliocsoft.com
+8- Realize o comando push novamente: git push
+9- Para atualizarmos o projeto supondo que estamos trabalhando em equipe utilize o comando: git pull
+
+Podemos criar branchs por vários motivos (Para iniciar uma evolutiva com parte da equipe, para manter a master sem erros, etc) 
+10- Para iniciar uma nova branch faça o comando: git branch evolutiva-pacote-1
+11- Podemos identificar as branchs do projeto com o comando: git branch
+12- Para começar a desenvolver na nova branch devemos usar o comando: git checkout evolutiva-pacote-1
+ *A partir desse momento os commits afetaram a branch evolutiva-pacote-1
+13- O envio deve indicar a branch: git push origin evolutiva-pacote-1
+ 
+Para juntar (merge) da evolutiva-pacote-1 para a master faremos os seguintes passos:
+13- Passaremos para a master: git checkout master
+14- Faremos o merge: git merge evolutiva-pacote-1
+
+Após o merge poderemos optar por excluir a branch
+15- Para exlcuir iremos usar o comando: git branch -d evolutiva-pacote-1
+
+Para ver o percurso das branchs com a master podemos usar uma flag no log
+16- Ver log de forma "gráfica": git log --graph --oneline
+
+Restaurar arquivos modificados
+17- Podemos descartar as modificações antes de dar um add. no arquivo utilizando: git checkout arquivo.txt
+18- Podemos remover do Staged o arquivo que foi adicionado com o add. utilizando: git reset head arquivo.txt
+19- Se já tivermos feito a adição e o commit é possível voltar ao estado anterior usando ^ o símbolo pode ser usado n vezes: git reset head^ arquivo.txt
+
+Remover o arquivo do versionamento
+20- Para remover o arquivo do versionamento podemos usar: git rm --cached arquivo.txt
+21- Remover definitivamente os commits: git reset --hard  @ "substitua o @ pelo id do commit"
+
+Temos a opção de voltar a qualquer estado dos commits 
+22- Supondo que desejamos recuperar o arquivo removido: git checkout @ "substitua o @ pelo id do commit"

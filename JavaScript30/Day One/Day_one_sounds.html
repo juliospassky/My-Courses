@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sounds Day One</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="keys">
+        <div key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">boom</span>
+        </div>
+
+        <div key="66" class="key">
+            <kbd>B</kbd>
+            <span class="sound">clap</span>
+        </div>
+
+        <div key="67" class="key">
+            <kbd>C</kbd>
+            <span class="sound">hihat</span>
+        </div>
+    </div>
+
+    <audio key="65" src="sounds wav/boom.wav"></audio>
+    <audio key="66" src="sounds wav/clap.wav"></audio>
+    <audio key="67" src="sounds wav/hihat.wav"></audio>
+</body>
+
+<script>
+    function playSound(e) {
+        const audio = document.querySelector(`audio[key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[key="${e.keyCode}"]`);
+
+        if (!audio) return;
+
+        audio.currentTime = 0;
+        audio.play();
+
+        key.classList.add('playing');
+    }
+
+    function removeTransition(e) {
+        if (e.propertyName !== 'transform') return;
+        this.classList.remove('playing');
+    }
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+
+</script>
+
+</html>

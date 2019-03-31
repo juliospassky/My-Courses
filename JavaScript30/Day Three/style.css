@@ -1,0 +1,37 @@
+:root {
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 0px;
+    --rotate: 0deg;
+}
+
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    transform: rotate(var(--rotate));
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.66, 0.15, 0.53, 2.03);
+}
+
+.h1 {
+    color: var(--base);
+}
+ 
+
+body {
+    text-align: center;
+    background: #193549;
+    color: white;
+    font-family: 'Segoe-UI';
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.controls {
+    margin-bottom: 50px;
+}
+
+input {
+    width: 100px;
+}
