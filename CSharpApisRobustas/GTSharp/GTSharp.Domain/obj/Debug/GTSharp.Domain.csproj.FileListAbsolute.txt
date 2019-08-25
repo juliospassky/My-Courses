@@ -1,0 +1,6 @@
+C:\Users\julio\Desktop\MeusCursos\CSharpApisRobustas\GTSharp\GTSharp.Domain\bin\Debug\GTSharp.Domain.dll
+C:\Users\julio\Desktop\MeusCursos\CSharpApisRobustas\GTSharp\GTSharp.Domain\bin\Debug\GTSharp.Domain.pdb
+C:\Users\julio\Desktop\MeusCursos\CSharpApisRobustas\GTSharp\GTSharp.Domain\obj\Debug\GTSharp.Domain.csprojAssemblyReference.cache
+C:\Users\julio\Desktop\MeusCursos\CSharpApisRobustas\GTSharp\GTSharp.Domain\obj\Debug\GTSharp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\julio\Desktop\MeusCursos\CSharpApisRobustas\GTSharp\GTSharp.Domain\obj\Debug\GTSharp.Domain.dll
+C:\Users\julio\Desktop\MeusCursos\CSharpApisRobustas\GTSharp\GTSharp.Domain\obj\Debug\GTSharp.Domain.pdb
