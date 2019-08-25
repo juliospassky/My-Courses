@@ -5,7 +5,7 @@ namespace GTSharp.Domain.Arguments.User
 {
     public class AddUserResponse : IResponse
     {
-        public Guid Guid { get; set; }
+        public Guid Id { get; set; }
 
         public string Message { get; set; }
     }

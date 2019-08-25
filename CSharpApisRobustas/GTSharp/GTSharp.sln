@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharp.Domain", "GTSharp.Domain\GTSharp.Domain.csproj", "{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharpConsoleApp", "GTSharpConsoleApp\GTSharpConsoleApp.csproj", "{AC45BAB4-9203-4665-8591-8FF269629479}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC45BAB4-9203-4665-8591-8FF269629479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC45BAB4-9203-4665-8591-8FF269629479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC45BAB4-9203-4665-8591-8FF269629479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC45BAB4-9203-4665-8591-8FF269629479}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

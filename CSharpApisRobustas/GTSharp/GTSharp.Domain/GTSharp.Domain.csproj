@@ -41,14 +41,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arguments\Plataform\AddPlataformRequest.cs" />
+    <Compile Include="Arguments\Plataform\AddPlataformResponse.cs" />
+    <Compile Include="Arguments\User\AddUserRequest.cs" />
+    <Compile Include="Arguments\User\AddUserResponse.cs" />
+    <Compile Include="Arguments\User\AuthUserRequest.cs" />
+    <Compile Include="Arguments\User\AuthUserResponse.cs" />
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\MyGame.cs" />
     <Compile Include="Entities\PlataformGame.cs" />
     <Compile Include="Entities\Platform.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Enum\EnumUserStatus.cs" />
+    <Compile Include="Interfaces\Arguments\IResponse .cs" />
+    <Compile Include="Interfaces\Arguments\IRequest.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryUser.cs" />
+    <Compile Include="Interfaces\Services\IServicePlataform.cs" />
+    <Compile Include="Interfaces\Services\IServiceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ServiceUser.cs" />
+    <Compile Include="ValueObjects\Email.cs" />
+    <Compile Include="ValueObjects\Name.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Diagram\GTSharpDiagram.cd" />
   </ItemGroup>
