@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GTSharp.Domain.Entities.Game">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAggAAAAAAAAAYAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GTSharp.Domain.Entities.MyGame">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAACAAAA=</HashCode>
+      <FileName>Entities\MyGame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PlataformGame" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GTSharp.Domain.Entities.PlataformGame">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAIAAAAAAAAAAAAAAgAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PlataformGame.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Platform" />
+      <Property Name="Game" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GTSharp.Domain.Entities.Platform">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Platform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GTSharp.Domain.Entities.User">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAEACAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAg=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
