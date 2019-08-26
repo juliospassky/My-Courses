@@ -1,14 +1,19 @@
-﻿namespace GTSharp.Domain.ValueObjects
-{
-    public class Email
-    {
-        public string Adress { get; set; }
-    }
+﻿using GTSharp.Domain.Resources;
+using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
 
-//    Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-//    Match match = regex.Match(email);
-//if (match.Success)
-//    Response.Write(email + " is correct");
-//else
-//    Response.Write(email + " is incorrect");
+namespace GTSharp.Domain.ValueObjects
+{
+    public class Email : Notifiable
+    {
+        public string Adress { get; private set; }
+
+        public Email(string adress)
+        {
+            Adress = adress;
+
+            new AddNotifications<Email>(this)
+                .IfNotEmail(o => o.Adress, Message.X0_IsInvalid.ToFormat(Message.Email));
+        }
+    }
 }
