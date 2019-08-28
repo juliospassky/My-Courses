@@ -109,6 +109,7 @@
     <Compile Include="Entities\Platform.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Enum\EnumUserStatus.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
     <Compile Include="Interfaces\Arguments\IResponse .cs" />
     <Compile Include="Interfaces\Arguments\IRequest.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryUser.cs" />

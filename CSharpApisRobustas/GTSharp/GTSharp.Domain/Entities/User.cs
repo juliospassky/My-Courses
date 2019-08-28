@@ -20,6 +20,15 @@ namespace GTSharp.Domain.Entities
 
         public EnumUserStatus Status { get; private set; }
 
+        public User(Email email, string password)
+        {
+            Email = email;
+            Password = password;
+
+            new AddNotifications<User>(this)
+                .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X1_Required_Between.ToFormat(Message.LastName, "6", "32"));
+        }
+
         public User(Name name, Email email, string password)
         {
             Id = Guid.NewGuid();
@@ -35,6 +44,11 @@ namespace GTSharp.Domain.Entities
                 password = password.ConvertToMD5();
 
             AddNotifications(name, email);
+        }
+
+        public override string ToString()
+        {
+            return $"{Name.FirstName} {Name.LastName}";
         }
     }
 }

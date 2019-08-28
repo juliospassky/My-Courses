@@ -1,4 +1,5 @@
 ﻿using GTSharp.Domain.Arguments.User;
+using System.Collections.Generic;
 
 namespace GTSharp.Domain.Interfaces.Services
 {
@@ -7,5 +8,9 @@ namespace GTSharp.Domain.Interfaces.Services
         AuthUserResponse AuthUser(AuthUserRequest request);
 
         AddUserResponse AddUser(AddUserRequest request);
+
+        UpdateUserResponse AuthUser(UpdateUserRequest request);
+
+        IEnumerable<UserResponse> UserList();
     }
 }

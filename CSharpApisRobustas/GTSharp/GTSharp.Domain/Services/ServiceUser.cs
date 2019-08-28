@@ -1,4 +1,6 @@
-﻿using GTSharp.Domain.Arguments.User;
+﻿using System.Collections.Generic;
+using System.Linq;
+using GTSharp.Domain.Arguments.User;
 using GTSharp.Domain.Entities;
 using GTSharp.Domain.Interfaces.Repositories;
 using GTSharp.Domain.Interfaces.Services;
@@ -6,7 +8,6 @@ using GTSharp.Domain.Resources;
 using GTSharp.Domain.ValueObjects;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
-using System;
 
 namespace GTSharp.Domain.Services
 {
@@ -21,29 +22,47 @@ namespace GTSharp.Domain.Services
 
         public AddUserResponse AddUser(AddUserRequest request)
         {
+            //TODO mudar mensagem
+            if (request == null) AddNotification("AddUser", Message.X0_IsRequired.ToFormat("AddUser"));
+
+            var name = new Name(request.FirstName, request.LastName);
             var email = new Email(request.Email);
-            var name = new Name(request.FirstName, request.Password);
             var newUser = new User(name, email, request.Password);
 
+            AddNotifications(newUser, email, name);
+            
             if (IsInvalid())
                 return null;
 
-            Guid id = _repositorieUser.AddUser(newUser);
-
-            return new AddUserResponse() { Id = id, Message = Message.SuccessOperation};
+            return (AddUserResponse)newUser;
         }
 
         public AuthUserResponse AuthUser(AuthUserRequest request)
         {
+            //TODO mudar mensagem
             if (request == null) AddNotification("AuthUserRequest", Message.X0_IsRequired.ToFormat("AuthUserRequest"));
 
-            var name = new Name(request.FirstName, request.LastName);
             var email = new Email(request.Email);
-            var user = new User(name, email, request.Password);
+            var authUser = new User(email, request.Password);
 
-            AddNotifications(name, email, user);
+            AddNotifications(authUser, email);
 
-            return user.IsValid() ? _repositorieUser.AuthUser(request) : null;             
+            if (IsInvalid())
+                return null;
+
+            authUser = _repositorieUser.AuthUser(authUser.Email.Adress, authUser.Password);
+
+            return (AuthUserResponse) authUser;
+        }
+
+        public UpdateUserResponse AuthUser(UpdateUserRequest request)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public IEnumerable<UserResponse> UserList()
+        {
+            return _repositorieUser.UserList().ToList().Select(o => (UserResponse)o).ToList();
         }
     }
 }
