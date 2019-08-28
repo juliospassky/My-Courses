@@ -6,9 +6,9 @@ namespace GTSharp.Domain.ValueObjects
 {
     public class Name : Notifiable
     {
-        public string FirstName { get; set; }
+        public string FirstName { get; private set; }
 
-        public string LastName { get; set; }
+        public string LastName { get; private set; }
 
         public Name(string firstName, string lastName)
         {
@@ -16,8 +16,8 @@ namespace GTSharp.Domain.ValueObjects
             LastName = lastName;
 
             new AddNotifications<Name>(this)
-                .IfNullOrWhiteSpace(o => o.FirstName, Message.X0_IsInvalid.ToFormat(Message.FirstName))
-                .IfNullOrWhiteSpace(o => o.LastName, Message.X0_IsInvalid.ToFormat(Message.LastName));
+                .IfNullOrInvalidLength(o => o.FirstName, 3, 80, Message.X1_Required_Between.ToFormat(Message.FirstName, "3", "80"))
+                .IfNullOrInvalidLength(o => o.LastName, 3, 80, Message.X1_Required_Between.ToFormat(Message.LastName, "3", "80"));
         }
     }
 }

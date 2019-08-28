@@ -20,8 +20,15 @@ namespace GTSharp.Domain.Services
         }
 
         public AddUserResponse AddUser(AddUserRequest request)
-        {            
-            Guid id = _repositorieUser.AddUser(null);
+        {
+            var email = new Email(request.Email);
+            var name = new Name(request.FirstName, request.Password);
+            var newUser = new User(name, email, request.Password);
+
+            if (IsInvalid())
+                return null;
+
+            Guid id = _repositorieUser.AddUser(newUser);
 
             return new AddUserResponse() { Id = id, Message = Message.SuccessOperation};
         }

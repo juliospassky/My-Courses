@@ -131,5 +131,14 @@ namespace GTSharp.Domain.Resources {
                 return ResourceManager.GetString("X0_IsRequired", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Is required and lenght between {0}, {1} .
+        /// </summary>
+        public static string X1_Required_Between {
+            get {
+                return ResourceManager.GetString("X1_Required_Between", resourceCulture);
+            }
+        }
     }
 }

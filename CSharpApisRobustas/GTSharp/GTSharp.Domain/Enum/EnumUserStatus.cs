@@ -2,7 +2,8 @@
 {
     public enum EnumUserStatus
     {
-        Active = 0,
-        Inactive = 1
+        InAnalysis = 0,
+        Active = 1,
+        Inactive = 2
     }
 }

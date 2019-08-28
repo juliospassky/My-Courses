@@ -141,4 +141,7 @@
   <data name="X0_IsRequired" xml:space="preserve">
     <value>{0} é requerido(a)</value>
   </data>
+  <data name="X1_Required_Between" xml:space="preserve">
+    <value>É requerido e tamanho entre {0}, {1}</value>
+  </data>
 </root>
