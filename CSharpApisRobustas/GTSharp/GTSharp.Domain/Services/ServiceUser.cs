@@ -37,6 +37,11 @@ namespace GTSharp.Domain.Services
             return (AddUserResponse)newUser;
         }
 
+        public UpdateUserResponse UpdateUser(UpdateUserRequest request)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public AuthUserResponse AuthUser(AuthUserRequest request)
         {
             //TODO mudar mensagem
@@ -54,11 +59,7 @@ namespace GTSharp.Domain.Services
 
             return (AuthUserResponse) authUser;
         }
-
-        public UpdateUserResponse AuthUser(UpdateUserRequest request)
-        {
-            throw new System.NotImplementedException();
-        }
+                
 
         public IEnumerable<UserResponse> UserList()
         {

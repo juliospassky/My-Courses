@@ -9,7 +9,7 @@ namespace GTSharp.Domain.Interfaces.Services
 
         AddUserResponse AddUser(AddUserRequest request);
 
-        UpdateUserResponse AuthUser(UpdateUserRequest request);
+        UpdateUserResponse UpdateUser(UpdateUserRequest request);
 
         IEnumerable<UserResponse> UserList();
     }

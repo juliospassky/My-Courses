@@ -103,6 +103,9 @@
     <Compile Include="Arguments\User\AddUserResponse.cs" />
     <Compile Include="Arguments\User\AuthUserRequest.cs" />
     <Compile Include="Arguments\User\AuthUserResponse.cs" />
+    <Compile Include="Arguments\User\UpdateUserRequest.cs" />
+    <Compile Include="Arguments\User\UpdateUserResponse.cs" />
+    <Compile Include="Arguments\User\UserResponse.cs" />
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\MyGame.cs" />
     <Compile Include="Entities\PlataformGame.cs" />

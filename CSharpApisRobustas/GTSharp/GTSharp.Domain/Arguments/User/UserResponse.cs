@@ -20,7 +20,7 @@ namespace GTSharp.Domain.Arguments.User
         {
             return new UserResponse()
             {
-                ComplettName = entite.ToString();
+                ComplettName = entite.ToString(),
                 FirstName = entite.Name.FirstName,
                 LastName = entite.Name.LastName,
                 Email = entite.Email.Adress,
