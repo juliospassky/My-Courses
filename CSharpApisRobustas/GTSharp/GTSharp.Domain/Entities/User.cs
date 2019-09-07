@@ -1,4 +1,5 @@
-﻿using GTSharp.Domain.Enum;
+﻿using GTSharp.Domain.Entities.Base;
+using GTSharp.Domain.Enum;
 using GTSharp.Domain.Extensions;
 using GTSharp.Domain.Resources;
 using GTSharp.Domain.ValueObjects;
@@ -8,10 +9,8 @@ using System;
 
 namespace GTSharp.Domain.Entities
 {
-    public class User : Notifiable
+    public class User : EntityBase
     {   
-        public Guid Id { get; private set; }
-
         public Name Name { get; private set; }
 
         public Email Email { get; private set; }
@@ -27,11 +26,13 @@ namespace GTSharp.Domain.Entities
 
             new AddNotifications<User>(this)
                 .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X1_Required_Between.ToFormat(Message.LastName, "6", "32"));
+
+            if (IsValid())
+                password = password.ConvertToMD5();
         }
 
         public User(Name name, Email email, string password)
         {
-            Id = Guid.NewGuid();
             Name = name;
             Email = email;
             Password = password;
@@ -43,6 +44,14 @@ namespace GTSharp.Domain.Entities
             if (IsValid())
                 password = password.ConvertToMD5();
 
+            AddNotifications(name, email);
+        }
+
+        public void UpdateUser(Name name, Email email)
+        {
+            Name = name;
+            Email = email;
+                        
             AddNotifications(name, email);
         }
 

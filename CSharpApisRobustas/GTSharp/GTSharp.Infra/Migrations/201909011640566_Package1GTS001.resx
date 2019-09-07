@@ -117,34 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DataNotFound" xml:space="preserve">
-    <value>Data not found</value>
+  <data name="Target" xml:space="preserve">
+    <value>H4sIAAAAAAAEAOVZ227bRhB9L9B/IPjsiJKNAK1AJlBkORBi2YZp5zVYkSN52+WS2V26EoJ+WR/6Sf2FzPIukrpQcowWhQHbWs6cnTkznJ1Z/fPX3/b7VcCMZxCShtwxB72+aQD3Qp/ypWPGavHmF/P9u59/sid+sDI+53IXWg41uXTMJ6WioWVJ7wkCInsB9UQow4XqeWFgET+0zvv9X63BwAKEMBHLMOz7mCsaQPIBP45D7kGkYsJmoQ9MZuv4xE1QjRsSgIyIB4758cF9IiLqTflCkN6dtkgqNBlMY8QoQYNcYAvTIJyHiig0d/gowVUi5Es3wgXCHtYRoNyCMAmZG8NS/FCP+ufaI6tUzKG8WKow6Ag4uMgosurqRxFtFhQm9AYRg5V2O2HSMfVv06jvNBwzoYVKki/xMeW9z4TFcDv/DTwle1r3zNiUOCtSAzNI/5wZ45ipWIDDIVaCsDPjLp4z6n2C9UP4O3CHx4xVrUQ770QYgVDrzMgrKqRKLU2twiBiWprGjKyugS/Vk2O+xTy8oivw84UsqI+cYhKjjhIxfrzBzcicQfHc2rnzNXmVjW2rEpndAZsgy+zYiCXKrxKykS9Ayh20YYr+QN4mWFXUukLbHSNqEYqgA3MJBgXZy3V/DHH4bGOhwuU9LDLzp34jU626Yj0EWidzLKZ+59Tfk/aDA+O3Ga4yLjujhXVaHBMprfc/jhIed710oSNKVlQqMNlKR5w7IuUfofBfIG867uxiisRy0wUeBzoh8kd7Ksm21IyDavWtYU7lFSPLsoXokLJxULPwpRIXmfRBsDUyn2495erivJbPMwjmIPIc5CNO2Br7J9NIzgvH7DcI39AYeYo+QyE92C095WRT/rxJfkpzsypgR6iQjAIr40gvw0q1MI6EZqTLLJc2LUthXVC1kwF9L1MgS6Hy1LB2g+gotgGkhawt0Qq/yhbXSnvcvBe2tjTD9oxEEQa30hxnK4abdsbjN273XjFIMSxPmjuiUOykQkGWUHuKW6OlSbt2SRSZE/1OjP2gIVaL4hZy883qgapX4pL2XEP/v5EvzSmhDG4NruTzCl0MgKvEWyjMqnQTDdVkUiGMiJYyPw5ZHPBtR8Uu7bSoV/XTlSaCbdVsr3NlNciqHVh19g+KTZr/LxOX5J3pHpN2tZPjkTWYW4/dfd4kki3A2wyrzDpV+yrLbWZuQyvnlypYudrqslXz+XBaKn3EPl5S0Q6u5BNF1ZFsv6O9aN2obGKqW5Wrh7+2eZdQxcnXXvnVbRw7dZFi9+L4qR0zdlby91/MNM6AVMQ0kJ5n6uv6764xDYKeFui5X9mYUfS3FJgRThcgVdrV4Kw4OK9d6vx7LlgsKX3WcmS2DZ+vPlPEnH6NASlFkxZU9yInzBfPRHj4Njfb+RLz1Jnvv0dQ426qjaW3/ZNvnl4IdmPSKzAbTfQUR4iVY35LtIbG46cvj+7k/stkNppen+HU85jQNjQeMN7Gn82LnRPnxgMy7YipkOoSc+QU2DaKNHvdwyaNnYNGWisd05+HaHdqaacxZOsU0oZ80nzSPBBsq3qfb1+CpMsSQt/uc/B0gpWguQx2CGEePXSoalEuUgvuDBTxkfmRwFcXB0x87GGHkFw4ZHPmBIdQf8pvYxXFaiQlDqVsXfXXtnbvnwxhmzbbt5H+JF/CBTSTogtwyz/ElPmF3VctqbkFQifhR8D15MV1Ff6F5bpAugn5gUAZfZcQAdfl8AGwfUIwectdUpndO9iG2XUNS+Kt83N9O8j+QGzSbl9SshQkkBlGqa+/o7L0l1TvvgOAwqb41hoAAA==</value>
   </data>
-  <data name="Email" xml:space="preserve">
-    <value>e-mail</value>
-  </data>
-  <data name="FailOperation" xml:space="preserve">
-    <value>Fail in operation</value>
-  </data>
-  <data name="FirstName" xml:space="preserve">
-    <value>First Name</value>
-  </data>
-  <data name="LastName" xml:space="preserve">
-    <value>Last Name</value>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="SuccessOperation" xml:space="preserve">
-    <value>Success in operation</value>
-  </data>
-  <data name="X0_IsInvalid" xml:space="preserve">
-    <value>{0} is invalid</value>
-  </data>
-  <data name="X0_IsRequired" xml:space="preserve">
-    <value>{0} is required</value>
-  </data>
-  <data name="X1_Required_Between" xml:space="preserve">
-    <value>Is required and lenght between {0}, {1} </value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

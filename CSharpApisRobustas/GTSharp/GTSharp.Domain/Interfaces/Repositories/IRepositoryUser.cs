@@ -1,16 +1,10 @@
-﻿using GTSharp.Domain.Arguments.User;
-using GTSharp.Domain.Entities;
+﻿using GTSharp.Domain.Entities;
+using GTSharp.Domain.Interfaces.Repositories.Base;
 using System;
-using System.Collections.Generic;
 
 namespace GTSharp.Domain.Interfaces.Repositories
 {
-    public interface IRepositoryUser
+    public interface IRepositoryUser : IRepositoryBase<User, Guid>
     {
-        User AuthUser(string email, string password);
-
-        User AddUser(User user);
-
-        IEnumerable<User> UserList();
     }
 }
