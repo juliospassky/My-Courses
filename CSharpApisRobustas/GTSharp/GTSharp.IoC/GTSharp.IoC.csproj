@@ -131,6 +131,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GTSharp.Domain\GTSharp.Domain.csproj">
+      <Project>{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}</Project>
+      <Name>GTSharp.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GTSharp.Infra\GTSharp.Infra.csproj">
       <Project>{C350A48F-FA52-4090-84B9-EEF489E67337}</Project>
       <Name>GTSharp.Infra</Name>

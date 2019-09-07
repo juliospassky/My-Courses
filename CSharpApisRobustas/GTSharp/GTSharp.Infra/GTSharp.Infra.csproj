@@ -64,6 +64,8 @@
     <Compile Include="Persistence\Repositories\Base\RepositoryBase.cs" />
     <Compile Include="Persistence\Repositories\RepositoryUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\IUnitOfWork.cs" />
+    <Compile Include="Transactions\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
