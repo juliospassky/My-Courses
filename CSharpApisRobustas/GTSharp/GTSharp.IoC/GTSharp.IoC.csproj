@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}</ProjectGuid>
+    <ProjectGuid>{139AC399-40D4-4BC3-B938-DA7273AD1654}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GTSharp.Domain</RootNamespace>
-    <AssemblyName>GTSharp.Domain</AssemblyName>
+    <RootNamespace>GTSharp.IoC</RootNamespace>
+    <AssemblyName>GTSharp.IoC</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="prmToolkit.NotificationPattern, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\prmToolkit.NotificationPattern.1.1.3\lib\netstandard1.0\prmToolkit.NotificationPattern.dll</HintPath>
@@ -42,6 +51,7 @@
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
     </Reference>
@@ -68,10 +78,16 @@
     <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
@@ -87,6 +103,9 @@
     <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -95,62 +114,27 @@
     <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Abstractions, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.11.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.11.1\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arguments\Base\ResponseBase.cs" />
-    <Compile Include="Arguments\Plataform\AddPlataformRequest.cs" />
-    <Compile Include="Arguments\Plataform\AddPlataformResponse.cs" />
-    <Compile Include="Arguments\User\AddUserRequest.cs" />
-    <Compile Include="Arguments\User\AddUserResponse.cs" />
-    <Compile Include="Arguments\User\AuthUserRequest.cs" />
-    <Compile Include="Arguments\User\AuthUserResponse.cs" />
-    <Compile Include="Arguments\User\UpdateUserRequest.cs" />
-    <Compile Include="Arguments\User\UpdateUserResponse.cs" />
-    <Compile Include="Arguments\User\UserResponse.cs" />
-    <Compile Include="Entities\Base\EntityBase.cs" />
-    <Compile Include="Entities\Game.cs" />
-    <Compile Include="Entities\MyGame.cs" />
-    <Compile Include="Entities\PlataformGame.cs" />
-    <Compile Include="Entities\Platform.cs" />
-    <Compile Include="Entities\User.cs" />
-    <Compile Include="Enum\EnumUserStatus.cs" />
-    <Compile Include="Extensions\StringExtension.cs" />
-    <Compile Include="Interfaces\Arguments\IResponse .cs" />
-    <Compile Include="Interfaces\Arguments\IRequest.cs" />
-    <Compile Include="Interfaces\Repositories\Base\IRepositoryBase.cs" />
-    <Compile Include="Interfaces\Repositories\IRepositoryUser.cs" />
-    <Compile Include="Interfaces\Services\IServicePlataform.cs" />
-    <Compile Include="Interfaces\Services\IServiceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Message_pt-br.Designer.cs">
-      <DependentUpon>Message_pt-br.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Resources\Message.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Message.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Services\ServiceUser.cs" />
-    <Compile Include="ValueObjects\Email.cs" />
-    <Compile Include="ValueObjects\Name.cs" />
+    <Compile Include="Unity\DependencyResolver.cs" />
+    <Compile Include="Unity\UnityResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="Diagram\GTSharpDiagram.cd" />
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Message_pt-br.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Message_pt-br.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Message.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Message.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\GTSharp.Infra\GTSharp.Infra.csproj">
+      <Project>{C350A48F-FA52-4090-84B9-EEF489E67337}</Project>
+      <Name>GTSharp.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

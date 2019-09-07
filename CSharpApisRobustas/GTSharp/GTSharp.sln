@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharpConsoleApp", "GTShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharp.Infra", "GTSharp.Infra\GTSharp.Infra.csproj", "{C350A48F-FA52-4090-84B9-EEF489E67337}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharp.IoC", "GTSharp.IoC\GTSharp.IoC.csproj", "{139AC399-40D4-4BC3-B938-DA7273AD1654}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C350A48F-FA52-4090-84B9-EEF489E67337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C350A48F-FA52-4090-84B9-EEF489E67337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C350A48F-FA52-4090-84B9-EEF489E67337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139AC399-40D4-4BC3-B938-DA7273AD1654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139AC399-40D4-4BC3-B938-DA7273AD1654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139AC399-40D4-4BC3-B938-DA7273AD1654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139AC399-40D4-4BC3-B938-DA7273AD1654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
