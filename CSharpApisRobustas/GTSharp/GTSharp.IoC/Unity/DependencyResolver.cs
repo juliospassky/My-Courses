@@ -6,10 +6,9 @@ using GTSharp.Infra.Persistence;
 using GTSharp.Infra.Persistence.Repositories;
 using GTSharp.Infra.Persistence.Repositories.Base;
 using GTSharp.Infra.Transactions;
+using Microsoft.Practices.Unity;
 using prmToolkit.NotificationPattern;
 using System.Data.Entity;
-using Unity;
-using Unity.Lifetime;
 
 namespace GTSharp.IoC.Unity
 {
