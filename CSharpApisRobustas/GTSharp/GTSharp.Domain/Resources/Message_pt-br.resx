@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="And" xml:space="preserve">
+    <value> e </value>
+  </data>
   <data name="DataNotFound" xml:space="preserve">
     <value>Dados não encontrados</value>
   </data>
   <data name="Email" xml:space="preserve">
-    <value>e-mail</value>
+    <value>E-mail</value>
+  </data>
+  <data name="ExceptionDefault" xml:space="preserve">
+    <value>Erro interno no servidor! Contate o administrador</value>
   </data>
   <data name="FailOperation" xml:space="preserve">
     <value>Falha na operação</value>
@@ -132,8 +138,11 @@
   <data name="LastName" xml:space="preserve">
     <value>Último nome</value>
   </data>
+  <data name="Or" xml:space="preserve">
+    <value> ou </value>
+  </data>
   <data name="Password" xml:space="preserve">
-    <value>password</value>
+    <value>Password</value>
   </data>
   <data name="SuccessOperation" xml:space="preserve">
     <value>Sucesso na operação</value>
@@ -146,5 +155,8 @@
   </data>
   <data name="X1_Required_Between" xml:space="preserve">
     <value>É requerido e tamanho entre {0}, {1}</value>
+  </data>
+  <data name="X2_Required_Between" xml:space="preserve">
+    <value>{0} é requerido e tamanho deve estar entre  {1}, {2}</value>
   </data>
 </root>

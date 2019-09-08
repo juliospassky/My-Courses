@@ -119,6 +119,7 @@
     <Compile Include="Interfaces\Arguments\IRequest.cs" />
     <Compile Include="Interfaces\Repositories\Base\IRepositoryBase.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryUser.cs" />
+    <Compile Include="Interfaces\Services\Base\IServiceBase.cs" />
     <Compile Include="Interfaces\Services\IServicePlataform.cs" />
     <Compile Include="Interfaces\Services\IServiceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

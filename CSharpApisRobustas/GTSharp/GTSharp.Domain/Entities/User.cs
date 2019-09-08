@@ -25,7 +25,7 @@ namespace GTSharp.Domain.Entities
             Password = password;
 
             new AddNotifications<User>(this)
-                .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X1_Required_Between.ToFormat(Message.LastName, "6", "32"));
+                .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X2_Required_Between.ToFormat(Message.Password, "6", "32"));
 
             if (IsValid())
                 password = password.ConvertToMD5();
@@ -39,12 +39,10 @@ namespace GTSharp.Domain.Entities
             Status = EnumUserStatus.InAnalysis;
 
             new AddNotifications<User>(this)
-                .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X1_Required_Between.ToFormat(Message.LastName, "6", "32"));
+                .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X2_Required_Between.ToFormat(Message.Password, "6", "32"));
 
             if (IsValid())
                 password = password.ConvertToMD5();
-
-            AddNotifications(name, email);
         }
 
         public void UpdateUser(Name name, Email email)

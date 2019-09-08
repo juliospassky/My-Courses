@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharp.Domain", "GTSharp.Domain\GTSharp.Domain.csproj", "{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharpConsoleApp", "GTSharpConsoleApp\GTSharpConsoleApp.csproj", "{AC45BAB4-9203-4665-8591-8FF269629479}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharp.Infra", "GTSharp.Infra\GTSharp.Infra.csproj", "{C350A48F-FA52-4090-84B9-EEF489E67337}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharp.IoC", "GTSharp.IoC\GTSharp.IoC.csproj", "{139AC399-40D4-4BC3-B938-DA7273AD1654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTSharpCustom.Api", "GTSharpCustom.Api\GTSharpCustom.Api.csproj", "{58440138-3226-4E66-8C7E-5E816A6EA9B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{809D7F3C-53F9-4A1C-A1B0-3476BF82B333}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AC45BAB4-9203-4665-8591-8FF269629479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC45BAB4-9203-4665-8591-8FF269629479}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC45BAB4-9203-4665-8591-8FF269629479}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC45BAB4-9203-4665-8591-8FF269629479}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C350A48F-FA52-4090-84B9-EEF489E67337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C350A48F-FA52-4090-84B9-EEF489E67337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C350A48F-FA52-4090-84B9-EEF489E67337}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{139AC399-40D4-4BC3-B938-DA7273AD1654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{139AC399-40D4-4BC3-B938-DA7273AD1654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{139AC399-40D4-4BC3-B938-DA7273AD1654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58440138-3226-4E66-8C7E-5E816A6EA9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58440138-3226-4E66-8C7E-5E816A6EA9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58440138-3226-4E66-8C7E-5E816A6EA9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58440138-3226-4E66-8C7E-5E816A6EA9B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

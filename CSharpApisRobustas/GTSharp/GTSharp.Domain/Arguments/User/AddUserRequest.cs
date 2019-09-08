@@ -1,5 +1,4 @@
 ﻿using GTSharp.Domain.Interfaces.Arguments;
-using GTSharp.Domain.ValueObjects;
 
 namespace GTSharp.Domain.Arguments.User
 {

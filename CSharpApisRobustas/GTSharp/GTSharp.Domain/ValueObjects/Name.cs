@@ -16,8 +16,8 @@ namespace GTSharp.Domain.ValueObjects
             LastName = lastName;
 
             new AddNotifications<Name>(this)
-                .IfNullOrInvalidLength(o => o.FirstName, 3, 80, Message.X1_Required_Between.ToFormat(Message.FirstName, "3", "80"))
-                .IfNullOrInvalidLength(o => o.LastName, 3, 80, Message.X1_Required_Between.ToFormat(Message.LastName, "3", "80"));
+                .IfNullOrInvalidLength(o => o.FirstName, 3, 80, Message.X2_Required_Between.ToFormat(Message.FirstName, "3", "80"))
+                .IfNullOrInvalidLength(o => o.LastName, 3, 80, Message.X2_Required_Between.ToFormat(Message.LastName, "3", "80"));
         }
     }
 }

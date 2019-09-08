@@ -1,6 +1,6 @@
 ﻿namespace GTSharp.Infra.Transactions
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         void Commit();
     }

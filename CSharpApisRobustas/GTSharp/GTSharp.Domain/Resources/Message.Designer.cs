@@ -61,6 +61,15 @@ namespace GTSharp.Domain.Resources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a  and .
+        /// </summary>
+        public static string And {
+            get {
+                return ResourceManager.GetString("And", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Data not found.
         /// </summary>
         public static string DataNotFound {
@@ -70,11 +79,20 @@ namespace GTSharp.Domain.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a e-mail.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-mail.
         /// </summary>
         public static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Internal Server Error! Contact the Administrator.
+        /// </summary>
+        public static string ExceptionDefault {
+            get {
+                return ResourceManager.GetString("ExceptionDefault", resourceCulture);
             }
         }
         
@@ -106,7 +124,16 @@ namespace GTSharp.Domain.Resources {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a password.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a  or .
+        /// </summary>
+        public static string Or {
+            get {
+                return ResourceManager.GetString("Or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Password.
         /// </summary>
         public static string Password {
             get {
@@ -147,6 +174,15 @@ namespace GTSharp.Domain.Resources {
         public static string X1_Required_Between {
             get {
                 return ResourceManager.GetString("X1_Required_Between", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} is required and lenght between {1}, {2}.
+        /// </summary>
+        public static string X2_Required_Between {
+            get {
+                return ResourceManager.GetString("X2_Required_Between", resourceCulture);
             }
         }
     }

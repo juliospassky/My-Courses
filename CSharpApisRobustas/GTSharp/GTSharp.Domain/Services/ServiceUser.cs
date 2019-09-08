@@ -32,7 +32,7 @@ namespace GTSharp.Domain.Services
             var email = new Email(request.Email);
             var newUser = new User(name, email, request.Password);
 
-            AddNotifications(newUser, email, name);
+            AddNotifications(newUser, name, email);
 
             if (IsInvalid())
                 return null;

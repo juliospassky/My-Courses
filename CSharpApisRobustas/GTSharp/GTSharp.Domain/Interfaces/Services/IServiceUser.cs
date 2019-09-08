@@ -1,11 +1,12 @@
 ﻿using GTSharp.Domain.Arguments.Base;
 using GTSharp.Domain.Arguments.User;
+using GTSharp.Domain.Interfaces.Services.Base;
 using System;
 using System.Collections.Generic;
 
 namespace GTSharp.Domain.Interfaces.Services
 {
-    public interface IServiceUser
+    public interface IServiceUser : IServiceBase
     {
         AuthUserResponse AuthUser(AuthUserRequest request);
 
