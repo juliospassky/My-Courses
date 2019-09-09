@@ -9,7 +9,7 @@ using System;
 
 namespace GTSharp.Domain.Entities
 {
-    public class User : EntityBase
+    public class GTUser : EntityBase
     {   
         public Name Name { get; private set; }
 
@@ -19,30 +19,30 @@ namespace GTSharp.Domain.Entities
 
         public EnumUserStatus Status { get; private set; }
 
-        public User(Email email, string password)
+        public GTUser(Email email, string password)
         {
             Email = email;
             Password = password;
 
-            new AddNotifications<User>(this)
+            new AddNotifications<GTUser>(this)
                 .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X2_Required_Between.ToFormat(Message.Password, "6", "32"));
 
             if (IsValid())
                 password = password.ConvertToMD5();
         }
 
-        public User(Name name, Email email, string password)
+        public GTUser(Name name, Email email, string password)
         {
             Name = name;
             Email = email;
             Password = password;
             Status = EnumUserStatus.InAnalysis;
 
-            new AddNotifications<User>(this)
+            new AddNotifications<GTUser>(this)
                 .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X2_Required_Between.ToFormat(Message.Password, "6", "32"));
 
             if (IsValid())
-                password = password.ConvertToMD5();
+                Password = password.ConvertToMD5();
         }
 
         public void UpdateUser(Name name, Email email)

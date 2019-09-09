@@ -1,4 +1,4 @@
-﻿using GTSharp.Domain.Arguments.User;
+﻿using GTSharp.Domain.Arguments.GTUser;
 using GTSharp.Domain.Interfaces.Services;
 using GTSharp.Domain.Resources;
 using Microsoft.Owin.Security.OAuth;
@@ -59,7 +59,7 @@ namespace GTSharpCustom.Api.Security
                 var identity = new ClaimsIdentity(context.Options.AuthenticationType);
 
                 //Definindo as Claims
-                identity.AddClaim(new Claim("User", JsonConvert.SerializeObject(response)));
+                identity.AddClaim(new Claim("GTUser", JsonConvert.SerializeObject(response)));
 
                 var principal = new GenericPrincipal(identity, new string[] { });
 

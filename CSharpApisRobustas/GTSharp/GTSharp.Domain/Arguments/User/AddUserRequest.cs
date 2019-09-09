@@ -1,6 +1,6 @@
 ﻿using GTSharp.Domain.Interfaces.Arguments;
 
-namespace GTSharp.Domain.Arguments.User
+namespace GTSharp.Domain.Arguments.GTUser
 {
     public class AddUserRequest : IRequest
     {

@@ -1,6 +1,6 @@
 ﻿using GTSharp.Domain.Interfaces.Arguments;
 
-namespace GTSharp.Domain.Arguments.User
+namespace GTSharp.Domain.Arguments.GTUser
 {
     public class AuthUserResponse : IResponse
     {
@@ -12,7 +12,7 @@ namespace GTSharp.Domain.Arguments.User
 
         public int Status { get; set; }
 
-        public static explicit operator AuthUserResponse(Entities.User entitie)
+        public static explicit operator AuthUserResponse(Entities.GTUser entitie)
         {
             return new AuthUserResponse()
             {

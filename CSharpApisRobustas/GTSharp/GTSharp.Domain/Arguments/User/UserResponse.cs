@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GTSharp.Domain.Arguments.User
+namespace GTSharp.Domain.Arguments.GTUser
 {
     public class UserResponse
     {
@@ -16,7 +16,7 @@ namespace GTSharp.Domain.Arguments.User
 
         public int Status { get; set; }
         
-        public static explicit operator UserResponse(Entities.User entite)
+        public static explicit operator UserResponse(Entities.GTUser entite)
         {
             return new UserResponse()
             {

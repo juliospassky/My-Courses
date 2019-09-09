@@ -1,5 +1,5 @@
 ﻿using GTSharp.Domain.Arguments.Base;
-using GTSharp.Domain.Arguments.User;
+using GTSharp.Domain.Arguments.GTUser;
 using GTSharp.Domain.Interfaces.Services.Base;
 using System;
 using System.Collections.Generic;

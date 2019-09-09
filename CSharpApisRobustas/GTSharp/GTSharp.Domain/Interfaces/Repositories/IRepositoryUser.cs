@@ -4,7 +4,7 @@ using System;
 
 namespace GTSharp.Domain.Interfaces.Repositories
 {
-    public interface IRepositoryUser : IRepositoryBase<User, Guid>
+    public interface IRepositoryUser : IRepositoryBase<GTUser, Guid>
     {
     }
 }

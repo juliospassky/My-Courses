@@ -12,7 +12,7 @@ namespace GTSharp.Infra.Persistence
             Configuration.LazyLoadingEnabled = false;
         }
 
-        public IDbSet<User> Users { get; set; }
+        public IDbSet<GTUser> Users { get; set; }
 
         public IDbSet<Platform> Platforms { get; set; }
 

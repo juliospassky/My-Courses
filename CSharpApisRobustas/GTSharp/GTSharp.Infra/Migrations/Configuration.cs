@@ -9,7 +9,7 @@ namespace GTSharp.Infra.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(GTSharp.Infra.Persistence.GTSharpContext context)

@@ -49,13 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201909011640566_Package1GTS001.cs" />
-    <Compile Include="Migrations\201909011640566_Package1GTS001.Designer.cs">
-      <DependentUpon>201909011640566_Package1GTS001.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909011712509_Package1GTS002.cs" />
-    <Compile Include="Migrations\201909011712509_Package1GTS002.Designer.cs">
-      <DependentUpon>201909011712509_Package1GTS002.cs</DependentUpon>
+    <Compile Include="Migrations\201909090042468_Reset.cs" />
+    <Compile Include="Migrations\201909090042468_Reset.Designer.cs">
+      <DependentUpon>201909090042468_Reset.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\GTSharpContext.cs" />
@@ -67,7 +63,6 @@
     <Compile Include="Transactions\IUnitOfWork.cs" />
     <Compile Include="Transactions\UnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -79,11 +74,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201909011640566_Package1GTS001.resx">
-      <DependentUpon>201909011640566_Package1GTS001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909011712509_Package1GTS002.resx">
-      <DependentUpon>201909011712509_Package1GTS002.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909090042468_Reset.resx">
+      <DependentUpon>201909090042468_Reset.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

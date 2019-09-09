@@ -1,7 +1,7 @@
 ﻿using System;
 using GTSharp.Domain.Interfaces.Arguments;
 
-namespace GTSharp.Domain.Arguments.User
+namespace GTSharp.Domain.Arguments.GTUser
 {
     public class AddUserResponse : IResponse
     {
@@ -9,7 +9,7 @@ namespace GTSharp.Domain.Arguments.User
 
         public string Message { get; set; }
 
-        public static explicit operator AddUserResponse(Entities.User entitie)
+        public static explicit operator AddUserResponse(Entities.GTUser entitie)
         {
             return new AddUserResponse()
             {

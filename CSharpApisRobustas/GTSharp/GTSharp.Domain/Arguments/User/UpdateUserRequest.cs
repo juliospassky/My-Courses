@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GTSharp.Domain.Arguments.User
+namespace GTSharp.Domain.Arguments.GTUser
 {
     public class UpdateUserRequest
     {

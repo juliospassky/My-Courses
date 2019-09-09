@@ -5,7 +5,7 @@ using System;
 
 namespace GTSharp.Infra.Persistence.Repositories
 {
-    public class RepositoryUser : RepositoryBase<User,Guid>, IRepositoryUser
+    public class RepositoryUser : RepositoryBase<GTUser,Guid>, IRepositoryUser
     {
         protected readonly GTSharpContext _context;
 

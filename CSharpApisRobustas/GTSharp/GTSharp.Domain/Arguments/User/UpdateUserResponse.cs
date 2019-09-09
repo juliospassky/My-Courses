@@ -1,7 +1,7 @@
 ﻿using System;
 using GTSharp.Domain.Entities;
 
-namespace GTSharp.Domain.Arguments.User
+namespace GTSharp.Domain.Arguments.GTUser
 {
     public class UpdateUserResponse
     {
@@ -15,7 +15,7 @@ namespace GTSharp.Domain.Arguments.User
 
         public string Message { get; set; }
 
-        public static explicit operator UpdateUserResponse(Entities.User entitie)
+        public static explicit operator UpdateUserResponse(Entities.GTUser entitie)
         {
             return new UpdateUserResponse()
             {

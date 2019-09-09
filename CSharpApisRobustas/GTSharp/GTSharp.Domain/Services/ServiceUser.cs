@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using GTSharp.Domain.Arguments.Base;
-using GTSharp.Domain.Arguments.User;
+﻿using GTSharp.Domain.Arguments.Base;
+using GTSharp.Domain.Arguments.GTUser;
 using GTSharp.Domain.Entities;
 using GTSharp.Domain.Interfaces.Repositories;
 using GTSharp.Domain.Interfaces.Services;
@@ -10,6 +7,9 @@ using GTSharp.Domain.Resources;
 using GTSharp.Domain.ValueObjects;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GTSharp.Domain.Services
 {
@@ -30,7 +30,7 @@ namespace GTSharp.Domain.Services
 
             var name = new Name(request.FirstName, request.LastName);
             var email = new Email(request.Email);
-            var newUser = new User(name, email, request.Password);
+            var newUser = new GTUser(name, email, request.Password);
 
             AddNotifications(newUser, name, email);
 
@@ -48,7 +48,7 @@ namespace GTSharp.Domain.Services
             if (request == null)
                 AddNotification("UpdateUserRequest", Message.X0_IsRequired.ToFormat("UpdateUserRequest"));
 
-            User userUpdate = _repositorieUser.GetById(request.Id);
+            GTUser userUpdate = _repositorieUser.GetById(request.Id);
 
             if (userUpdate == null)
             {
@@ -79,7 +79,7 @@ namespace GTSharp.Domain.Services
                 AddNotification("AuthUserRequest", Message.X0_IsRequired.ToFormat("AuthUserRequest"));
 
             var email = new Email(request.Email);
-            var authUser = new User(email, request.Password);
+            var authUser = new GTUser(email, request.Password);
 
             AddNotifications(authUser, email);
 
@@ -99,7 +99,7 @@ namespace GTSharp.Domain.Services
 
         public ResponseBase RemoveUser(Guid id)
         {
-            User removeUser = _repositorieUser.GetById(id);
+            GTUser removeUser = _repositorieUser.GetById(id);
 
             if (removeUser == null)
             {

@@ -5,11 +5,11 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace GTSharp.Infra.Persistence.Map
 {
-    public class MapUser : EntityTypeConfiguration<User>
+    public class MapUser : EntityTypeConfiguration<GTUser>
     {
         public MapUser()
         {
-            ToTable("User");
+            ToTable("GTSUser");
 
             Property(o => o.Email.Adress).HasMaxLength(200).IsRequired()
                 .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute( "UK_USER_EMAIL") { IsUnique = true}))
