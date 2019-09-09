@@ -11,6 +11,7 @@ using System.Web.Http;
 namespace GTSharpCustom.Api.Controllers
 {
     //custom.com.br/api/user
+    [Authorize]
     [RoutePrefix("api/user")]
     public class UserController : ControllerBase
     {

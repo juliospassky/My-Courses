@@ -153,6 +153,9 @@
   <data name="X0_IsRequired" xml:space="preserve">
     <value>{0} is required</value>
   </data>
+  <data name="X1_Exist" xml:space="preserve">
+    <value>{0} exist data {1}</value>
+  </data>
   <data name="X1_Required_Between" xml:space="preserve">
     <value>Is required and lenght between {0}, {1} </value>
   </data>

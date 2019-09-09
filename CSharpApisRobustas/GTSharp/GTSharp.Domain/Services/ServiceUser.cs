@@ -34,6 +34,9 @@ namespace GTSharp.Domain.Services
 
             AddNotifications(newUser, name, email);
 
+            if (_repositorieUser.Exist(o => o.Email.Adress == request.Email))            
+                AddNotification(Message.Email, Message.X1_Exist.ToFormat(Message.Email, request.Email));
+              
             if (IsInvalid())
                 return null;
 
@@ -86,7 +89,7 @@ namespace GTSharp.Domain.Services
             if (IsInvalid())
                 return null;
 
-            authUser = _repositorieUser.GetBy(o => o.Email.Adress == authUser.Email.Adress, o => o.Password == authUser.Password);
+            authUser = _repositorieUser.GetBy(o => o.Email.Adress == authUser.Email.Adress && o.Password == authUser.Password);
 
             return (AuthUserResponse)authUser;
         }
@@ -94,7 +97,7 @@ namespace GTSharp.Domain.Services
 
         public IEnumerable<UserResponse> UserList()
         {
-            return _repositorieUser.List().Select(o => (UserResponse)o).ToList();
+            return _repositorieUser.List().ToList().Select(o => (UserResponse)o).ToList();
         }
 
         public ResponseBase RemoveUser(Guid id)

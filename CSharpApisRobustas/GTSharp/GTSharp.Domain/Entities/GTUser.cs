@@ -5,7 +5,6 @@ using GTSharp.Domain.Resources;
 using GTSharp.Domain.ValueObjects;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
-using System;
 
 namespace GTSharp.Domain.Entities
 {
@@ -19,6 +18,10 @@ namespace GTSharp.Domain.Entities
 
         public EnumUserStatus Status { get; private set; }
 
+        protected GTUser()
+        {
+        }
+
         public GTUser(Email email, string password)
         {
             Email = email;
@@ -28,7 +31,7 @@ namespace GTSharp.Domain.Entities
                 .IfNullOrInvalidLength(o => o.Password, 6, 32, Message.X2_Required_Between.ToFormat(Message.Password, "6", "32"));
 
             if (IsValid())
-                password = password.ConvertToMD5();
+                Password = password.ConvertToMD5();
         }
 
         public GTUser(Name name, Email email, string password)

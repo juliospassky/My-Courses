@@ -8,6 +8,10 @@ namespace GTSharp.Domain.ValueObjects
     {
         public string Adress { get; private set; }
 
+        protected Email()
+        {                
+        }
+
         public Email(string adress)
         {
             Adress = adress;

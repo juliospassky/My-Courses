@@ -10,6 +10,10 @@ namespace GTSharp.Domain.ValueObjects
 
         public string LastName { get; private set; }
 
+        protected Name()
+        {
+        }
+
         public Name(string firstName, string lastName)
         {
             FirstName = firstName;

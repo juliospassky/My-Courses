@@ -1,10 +1,11 @@
 ﻿using GTSharp.Domain.Interfaces.Arguments;
+using System;
 
 namespace GTSharp.Domain.Arguments.GTUser
 {
     public class AuthUserResponse : IResponse
     {
-        private static string enumStatus;
+        private Guid Id { get; set; }
 
         public string FirstName { get; set; }
 
@@ -16,6 +17,7 @@ namespace GTSharp.Domain.Arguments.GTUser
         {
             return new AuthUserResponse()
             {
+                Id = entitie.Id,
                 FirstName = entitie.Name.FirstName,
                 Email = entitie.Email.Adress,
                 Status = (int)entitie.Status
