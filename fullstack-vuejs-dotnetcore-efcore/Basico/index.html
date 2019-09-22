@@ -14,7 +14,7 @@
         <p>{{fruits[1] + ' e ' + fruits[2]}}</p>
         <p>Aluno: {{student.nome}}</p>
         <p>{{1 + num1}}</p>
-        <p>{{fun()}}</p>
+        <p>{{metod(0)}}</p>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -26,9 +26,11 @@
                 istrue: true,
                 fruits: ['Pera', 'Uva', 'Maçã'],
                 student: {nome: 'Julio'},
-                num1: 1,
-                fun: () => {
-                    return 'Mensagem da funcao'
+                num1: 1                
+            },
+            methods: {
+                metod(index) {
+                    return 'Frutas: ' + this.fruits[index];
                 }
             }
         })
