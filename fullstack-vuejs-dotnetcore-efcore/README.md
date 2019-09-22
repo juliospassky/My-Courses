@@ -4,4 +4,13 @@ Vamos utilizar o VUE.JS (VUE JS ou simplesmente VUE) e a mais nova framework par
 Neste curso nós vamos utilizar o VS Code e não vamos depender de nenhum sistema operacional específico como Windows, Linux ou OSX, você pode escolher qualquer um desses para desenvolver várias aplicações utilizando a framework mais popular e mais requisitada nas diversas oportunidades de emprego de todo o mundo.
 Esse é o ÚNICO curso da UDEMY que focado na utilização de VUE JS junto com a tecnologia Microsoft .NET Core.
 
+Extensões utilizadas no VSCode:
+1) Vue VS Code Extension Pack
+2) Prettier - Code Formater
+3) Bracket Pair Colorise
+4) Auto Rename Tag
+5) Live Server
+6) Material Icon Theme
+7) npm
+8) npm intellisense
 
