@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+
+  <body>
     <div id="app">
-        <img :src="srcimg" :title="title">
-        <hr>
-        <a :href="url">
-            Vue
-        </a>
-        <p v-text="'texto qualquer'"></p>
-        <div v-html="textparagraph">
-
-        </div>
-
+      <input type="text" v-model="inputText" />
+      <br />
+      {{ inputText }}
+      <br />
+      <div v-if="inputText == 1">
+        <img :src="srcimg" :title="title" class="img" />
+      </div>
+      <div v-else-if="inputText == 2">
+        <img :src="srcimg2" :title="title" class="img" />
+      </div>
+      <div v-else>
+        <img :src="srcimg3" :title="title" class="img" />
+      </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-        new Vue({
-            el: '#app',
-            data: {
-                srcimg: 'imgvue.png',
-                title: 'Logo Vue',
-                url: 'http://vuejs.org',
-                textparagraph: '<b>Texto</b> <br> qualquer'
-            }
-        })
-    
+      new Vue({
+        el: "#app",
+        data: {
+          inputText: "",
+          srcimg: "imgvue.png",
+          srcimg2: "imgvue2.png",
+          srcimg3: "imgvue3.png",
+          title: "Logo Vue"
+        }
+      });
     </script>
+  </body>
 
-</body>
+  <style>
+    img {
+      overflow: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+    }
+  </style>
 </html>
