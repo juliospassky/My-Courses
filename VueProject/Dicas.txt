@@ -1,0 +1,11 @@
+--Instalar o Vue.cli
+npm install -g @vue/cli
+
+--Criando o projeto
+vue create project
+
+--Inicia o servidor
+npm run serve
+
+--Abr o UI
+vue ui
