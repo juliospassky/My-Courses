@@ -18,13 +18,13 @@ namespace Shop.Controllers
         {
             var categories = await context.Categories.AsNoTracking().ToListAsync();
             return categories;
-        }        
+        }
 
 
         [HttpGet]
         [Route("{id:int}")]
         public async Task<ActionResult<Category>> GetById(int id, [FromServices] DataContext context)
-        {            
+        {
             var category = await context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
             return category;
         }

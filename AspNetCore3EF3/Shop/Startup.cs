@@ -21,7 +21,11 @@ namespace Shop
         {
             services.AddControllers();
             //Entity em memória
-            services.AddDbContext<DataContext>(o => o.UseInMemoryDatabase("Database"));
+            // services.AddDbContext<DataContext>(o => o.UseInMemoryDatabase("Database"));
+
+            //Usando o SQLServer
+            services.AddDbContext<DataContext>(o => o.UseSqlServer(Configuration.GetConnectionString("connectionString")));
+
 
             //Injeção de Dependência do Banco
             //Temos as opções AddSingleton, AddTransient, AddScoped.
