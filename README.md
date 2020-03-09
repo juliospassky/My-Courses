@@ -1,4 +1,11 @@
-# MeusCursos
+# My Corses
 
-Tarefas adicionais:
-Ver NuGet Unity.MVC
+Back-end
+
+Front-end
+
+Full
+
+Tests
+
+Version Control
