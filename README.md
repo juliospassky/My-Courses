@@ -7,6 +7,12 @@
   - [Criando Apis robustas em C#](https://www.udemy.com/certificate/UC-FCLPCM4D/)
 - Docker
   - [Docker: Ferramenta essencial para Desenvolvedores](https://www.udemy.com/certificate/UC-U3ENTBUZ/)
+- OOP Specialization
+  - [Orientação a Objetos com Java](https://www.coursera.org/account/accomplishments/records/P5U3G33TJ4R4)
+  - [Desenvolvimento Ágil com Java Avançado](https://www.coursera.org/account/accomplishments/records/6EBBE7TSJC69)
+  - [Princípios de Desenvolvimento Ágil de Software](https://www.coursera.org/account/accomplishments/records/KG7NAU768VNL)
+  - [TDD – Desenvolvimento de software guiado por testes](https://www.coursera.org/account/accomplishments/records/9LDAY82Z4RFT)
+  - []()
 ## Front-end
 aaa
 ## Full
@@ -21,3 +27,8 @@ aaa
 ## Version Control
 - Git
   - [Dominando Git e GitHub - Do iniciante ao expert](https://www.udemy.com/certificate/UC-IJCCMQ88/)
+## Soft Skills
+ - [Creativity, Innovation, and Change](https://www.coursera.org/account/accomplishments/records/ANRFJHRHN7FE)
+## Machine Learning
+- Linear Regression
+  - [Machine Learning Foundations: A Case Study Approach](https://www.coursera.org/account/accomplishments/records/U5WSNNUJWEC7)
