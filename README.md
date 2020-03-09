@@ -1,4 +1,4 @@
-# My Corses
+# My Courses
 ## Back-end
 - DotNetCore
   - [Introdução ao C# e Imersão ao .NET Framework](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjMzM2NjRlZTcxNzlhN2QxMjQwNThlYg==)
