@@ -7,7 +7,7 @@
   - [Criando APIs Data Driven com ASP.NET Core 3 e EF Core 3](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkZDUzMTZlN2MyMTNlNTYyNTE2YzI0OQ==)
   - [Criando Apis robustas em C#](https://www.udemy.com/certificate/UC-FCLPCM4D/)
 - Docker
- - (Docker: Ferramenta essencial para Desenvolvedores)[https://www.udemy.com/certificate/UC-U3ENTBUZ/]
+  - [Docker: Ferramenta essencial para Desenvolvedores](https://www.udemy.com/certificate/UC-U3ENTBUZ/)
 ## Front-end
 aaa
 ## Full
