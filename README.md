@@ -20,4 +20,4 @@ aaa
   - [Refatorando para testes de unidade](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkMDgxMzYyZmI2ZmMwMGU3OWFiOGE5Yg==)
 ## Version Control
 - Git
- - [Dominando Git e GitHub - Do iniciante ao expert](https://www.udemy.com/certificate/UC-IJCCMQ88/)
+  - [Dominando Git e GitHub - Do iniciante ao expert](https://www.udemy.com/certificate/UC-IJCCMQ88/)
