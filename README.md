@@ -12,7 +12,6 @@
   - [Desenvolvimento Ágil com Java Avançado](https://www.coursera.org/account/accomplishments/records/6EBBE7TSJC69)
   - [Princípios de Desenvolvimento Ágil de Software](https://www.coursera.org/account/accomplishments/records/KG7NAU768VNL)
   - [TDD – Desenvolvimento de software guiado por testes](https://www.coursera.org/account/accomplishments/records/9LDAY82Z4RFT)
-  - []()
 ## Front-end
 aaa
 ## Full
