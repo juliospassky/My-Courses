@@ -1,0 +1,12 @@
+O Rebase auxilia no project history que permite uma abordagem mais limpa em relação ao merge.
+O Rebase pega todos os commits da branch, irá colocar-los numa temp, ajustar a linha da master e re-inserir os comandos da branch.
+Dessa forma não teremos um commit "merge" e sim um commit "linear" com a master.
+
+Supondo que já temos uma branch com alguns commits irémos fazer os seguintes passos para criarmos um rebase:
+1- Vamos apontar para a branch: git checkout branch-evolutiva1
+2- Utilizar o comando do rebase: git rebase master
+3- Iremos apontar para a master: git checkout master
+4- Faremos agora o merge: git merge branch-evolutiva1
+
+Identificando a diferença
+5- Podemos perceber que a linha de histórico vai estar linear: git log --oneline --graph

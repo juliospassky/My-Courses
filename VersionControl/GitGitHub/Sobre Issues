@@ -1,0 +1,13 @@
+As issues servem para acompanhar as tarefas, os aprimoramentos e os bugs dos seus projetos.
+É comum definir labels para identificar do que se trata a issue, com isso, é possível criar filtros para tratar determinas tarefas posteriormente.
+
+1- Clique na aba "Issues" em seguida "Labels" e escolha o motivo de criar a Issue (bug, duplicate, enchancement, good first issue, help wanted, invalid, question e wontfix)
+2- Também temos a opção de definir novas "Labels"
+3- A Issue possuí um identificador ao lado do título ex.: #2 com esse identificador é possível "linkar" com o commit
+  *git commit -m "Resolvendo minha issue #2"
+4- Podemos marcar um contribuidor na issue para alertá-lo, para isso, no corpo da mensagem podemos digitar por exemplo @juliocsoft.
+5- Para fecharmos uma issue no commit podemos usar as palavras reservadas closes ou fixes: git commit -m "Resolvendo minha closes #2"
+6- Temos também a opção de fechar a issue pelo site do GitHub clicando no botão "Close and comment"
+7- Podemos assinar o responsável para tratar da issue na opção "Assigness"
+
+8- Temos a opção de criar milestones para as issues isso auxilia na definição de tempo para a conclusão das mesmas e é possível receber alertas.
