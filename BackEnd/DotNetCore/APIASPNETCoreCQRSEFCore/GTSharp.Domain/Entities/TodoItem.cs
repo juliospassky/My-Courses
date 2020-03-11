@@ -4,6 +4,7 @@ namespace GTSharp.Domain.Entities
 {
     public class TodoItem : Entity
     {
+        
         public string Title { get; private set; }
         public bool Done { get; set; }
         public string User { get; private set; }
