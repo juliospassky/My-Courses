@@ -4,6 +4,7 @@
   - [Modelando Domínios Ricos](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjMzUwZjYyZTcxNzlhN2QxMjQxNzAyYQ==)
   - [Criando APIs com ASP.NET Core 2.0 e Dapper](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjMzUwY2Y2ZTcxNzlhN2QxMjQxNmQ4OQ==)
   - [Criando APIs Data Driven com ASP.NET Core 3 e EF Core 3](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkZDUzMTZlN2MyMTNlNTYyNTE2YzI0OQ==)
+  - [API com ASP.NET Core, CQRS e EF Core](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVlMjYxYmNiZTcxNzlhMmYwMTEwYTUxMQ==)
   - [Criando Apis robustas em C#](https://www.udemy.com/certificate/UC-FCLPCM4D/)
 - Docker
   - [Docker: Ferramenta essencial para Desenvolvedores](https://www.udemy.com/certificate/UC-U3ENTBUZ/)
