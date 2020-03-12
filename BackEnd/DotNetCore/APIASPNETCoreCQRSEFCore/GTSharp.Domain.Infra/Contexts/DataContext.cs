@@ -2,7 +2,7 @@ using GTSharp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace GTSharp.Domain.Infra.DataContext
+namespace GTSharp.Domain.Infra.Contexts
 {
     public class DataContext : DbContext
     {
