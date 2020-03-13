@@ -6,6 +6,7 @@ using GTSharp.Domain.Commands.Output;
 using GTSharp.Domain.Entities;
 using GTSharp.Domain.Handlers;
 using GTSharp.Domain.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GTSharp.Domain.Api.Controllers
@@ -13,6 +14,7 @@ namespace GTSharp.Domain.Api.Controllers
 
     [ApiController]
     [Route("v1/todos")]
+    [Authorize]
     public class TodoController : ControllerBase
     {
 
