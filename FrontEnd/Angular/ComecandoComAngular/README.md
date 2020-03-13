@@ -1,4 +1,4 @@
 # Começando com Angular
 ## Comandos
-- Instalação do angular globalmente: `npm install -g @angular/cli`
+- Instalação do angular globalmente:```sh npm install -g @angular/cli ```
 
