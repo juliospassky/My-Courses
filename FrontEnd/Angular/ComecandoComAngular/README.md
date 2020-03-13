@@ -10,3 +10,8 @@ npm install -g @angular/cli
 ng new projectName
 ```
 
+- Executa a aplicação
+```sh
+ng serve
+```
+
