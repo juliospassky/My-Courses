@@ -14,9 +14,10 @@
   - [Princípios de Desenvolvimento Ágil de Software](https://www.coursera.org/account/accomplishments/records/KG7NAU768VNL)
   - [TDD – Desenvolvimento de software guiado por testes](https://www.coursera.org/account/accomplishments/records/9LDAY82Z4RFT)
 ## Front-end
-aaa
+- Angular
+  - [Começando com Angular](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjNmIyY2MyZTcxNzlhMjdlYjYyYmFlMA==)
 ## Full
-aaa
+
 ## Languages
 - C#
   - [Introdução ao C# e Imersão ao .NET Framework](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjMzM2NjRlZTcxNzlhN2QxMjQwNThlYg==)
