@@ -15,3 +15,8 @@ ng new projectName
 ng serve
 ```
 
+- Build para produção
+```sh
+ng build --prod
+```
+
