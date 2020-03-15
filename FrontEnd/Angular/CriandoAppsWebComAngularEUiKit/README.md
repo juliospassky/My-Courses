@@ -8,5 +8,14 @@
   ```sh
   npm install -g @angular/cli
   ```
+  - Instalação do yarn
+  ```sh
+  yarn install
+  ```
 
 ## Comandos
+- Compilar o uikit modificado
+  
+  ```sh
+  yarn compile
+  ```
