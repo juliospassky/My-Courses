@@ -18,7 +18,15 @@
   ```sh
   yarn compile
   ```
- - Gera um novo componente Ex.:
+ - Gera um novo componente Navbar
   ```sh
   ng generate component Navbar
+  ``` 
+ - Gera um novo componente Navbar
+  ```sh
+  ng generate component Navbar
+  ```
+   - Gera uma nova página
+  ```sh
+  ng generate page LoginPage
   ```
