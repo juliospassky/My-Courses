@@ -28,5 +28,5 @@
   ```
    - Gera uma nova página
   ```sh
-  ng generate page LoginPage
+  ng generate component LoginPage
   ```
