@@ -14,8 +14,11 @@
   ```
 
 ## Comandos
-- Compilar o uikit modificado
-  
+ - Compilar o uikit modificado
   ```sh
   yarn compile
+  ```
+ - Gera um novo componente Ex.:
+  ```sh
+  ng generate component Navbar
   ```
