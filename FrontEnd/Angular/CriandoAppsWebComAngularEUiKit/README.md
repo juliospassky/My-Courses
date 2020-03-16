@@ -12,12 +12,16 @@
   ```sh
   yarn install
   ```
-
-## Comandos
+  - Compilar o projeto após o clone
+  ```sh
+  npm install --save-dev @angular-devkit/build-angular
+  ``` 
  - Compilar o uikit modificado
   ```sh
   yarn compile
   ```
+  
+## Comandos
  - Gera um novo componente Navbar
   ```sh
   ng generate component Navbar
