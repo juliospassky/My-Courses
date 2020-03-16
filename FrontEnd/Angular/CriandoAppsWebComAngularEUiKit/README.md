@@ -16,7 +16,7 @@
   ```sh
   npm install --save-dev @angular-devkit/build-angular
   ``` 
- - Compilar o uikit modificado
+  - Compilar o uikit modificado
   ```sh
   yarn compile
   ```
