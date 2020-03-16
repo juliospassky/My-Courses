@@ -30,3 +30,5 @@
   ```sh
   ng generate component LoginPage
   ```
+## Dicas
+No verbo Get evita-se o subscribe que mantem a requisição bloqueada durante o seu processamento. Recomenda-se então o uso do Observable que trabalha de forma assincrona, por convenção usa-se $ no final da declaração da variável. Verificar arquivo products-page.components.cs para exemplo.
