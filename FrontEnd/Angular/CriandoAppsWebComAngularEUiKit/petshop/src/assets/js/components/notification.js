@@ -1,12 +1,14 @@
-/*! UIkit 3.3.6 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
+/*! UIkit 3.0.3 | http://www.getuikit.com | (c) 2014 - 2018 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('uikit-util')) :
     typeof define === 'function' && define.amd ? define('uikitnotification', ['uikit-util'], factory) :
     (global = global || self, global.UIkitNotification = factory(global.UIkit.util));
-}(this, (function (uikitUtil) { 'use strict';
+}(this, function (uikitUtil) { 'use strict';
 
     var obj;
+
+    var containers = {};
 
     var Component = {
 
@@ -20,7 +22,6 @@
             timeout: 5000,
             group: null,
             pos: 'top-center',
-            clsContainer: 'uk-notification',
             clsClose: 'uk-notification-close',
             clsMsg: 'uk-notification-message'
         },
@@ -45,11 +46,14 @@
 
         created: function() {
 
-            var container = uikitUtil.$(("." + (this.clsContainer) + "-" + (this.pos)), this.$container)
-                || uikitUtil.append(this.$container, ("<div class=\"" + (this.clsContainer) + " " + (this.clsContainer) + "-" + (this.pos) + "\" style=\"display: block\"></div>"));
+            if (!containers[this.pos]) {
+                containers[this.pos] = uikitUtil.append(this.$container, ("<div class=\"uk-notification uk-notification-" + (this.pos) + "\"></div>"));
+            }
+
+            var container = uikitUtil.css(containers[this.pos], 'display', 'block');
 
             this.$mount(uikitUtil.append(container,
-                ("<div class=\"" + (this.clsMsg) + (this.status ? (" " + (this.clsMsg) + "-" + (this.status)) : '') + "\"> <a href class=\"" + (this.clsClose) + "\" data-uk-close></a> <div>" + (this.message) + "</div> </div>")
+                ("<div class=\"" + (this.clsMsg) + (this.status ? (" " + (this.clsMsg) + "-" + (this.status)) : '') + "\"> <a href=\"#\" class=\"" + (this.clsClose) + "\" data-uk-close></a> <div>" + (this.message) + "</div> </div>")
             ));
 
         },
@@ -98,13 +102,11 @@
 
                 var removeFn = function () {
 
-                    var container = this$1.$el.parentNode;
-
                     uikitUtil.trigger(this$1.$el, 'close', [this$1]);
                     uikitUtil.remove(this$1.$el);
 
-                    if (container && !container.hasChildNodes()) {
-                        uikitUtil.remove(container);
+                    if (!containers[this$1.pos].children.length) {
+                        uikitUtil.css(containers[this$1.pos], 'display', 'none');
                     }
 
                 };
@@ -135,10 +137,12 @@
         };
     }
 
+    /* global UIkit, 'notification' */
+
     if (typeof window !== 'undefined' && window.UIkit) {
         window.UIkit.component('notification', Component);
     }
 
     return Component;
 
-})));
+}));

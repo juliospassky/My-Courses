@@ -1,10 +1,10 @@
-/*! UIkit 3.3.6 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
+/*! UIkit 3.0.3 | http://www.getuikit.com | (c) 2014 - 2018 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('uikit-util')) :
     typeof define === 'function' && define.amd ? define('uikitfilter', ['uikit-util'], factory) :
     (global = global || self, global.UIkitFilter = factory(global.UIkit.util));
-}(this, (function (uikitUtil) { 'use strict';
+}(this, function (uikitUtil) { 'use strict';
 
     var targetClass = 'uk-animation-target';
 
@@ -34,7 +34,7 @@
 
                 addStyle();
 
-                var children = uikitUtil.children(this.target);
+                var children = uikitUtil.toNodes(this.target.children);
                 var propsFrom = children.map(function (el) { return getProps(el, true); });
 
                 var oldHeight = uikitUtil.height(this.target);
@@ -46,12 +46,12 @@
                 children.forEach(uikitUtil.Transition.cancel);
 
                 reset(this.target);
-                this.$update(this.target, 'resize');
+                this.$update(this.target);
                 uikitUtil.fastdom.flush();
 
                 var newHeight = uikitUtil.height(this.target);
 
-                children = children.concat(uikitUtil.children(this.target).filter(function (el) { return !uikitUtil.includes(children, el); }));
+                children = children.concat(uikitUtil.toNodes(this.target.children).filter(function (el) { return !uikitUtil.includes(children, el); }));
 
                 var propsTo = children.map(function (el, i) { return el.parentNode && i in propsFrom
                         ? propsFrom[i]
@@ -89,14 +89,13 @@
                 uikitUtil.css(this.target, 'height', oldHeight);
                 uikitUtil.scrollTop(window, oldScrollY);
 
-                return uikitUtil.Promise.all(
-                    children.map(function (el, i) { return ['top', 'left', 'height', 'width'].some(function (prop) { return propsFrom[i][prop] !== propsTo[i][prop]; }
-                        ) && uikitUtil.Transition.start(el, propsTo[i], this$1.animation, 'ease'); }
-                    ).concat(oldHeight !== newHeight && uikitUtil.Transition.start(this.target, {height: newHeight}, this.animation, 'ease'))
-                ).then(function () {
+                return uikitUtil.Promise.all(children.map(function (el, i) { return propsFrom[i] && propsTo[i]
+                        ? uikitUtil.Transition.start(el, propsTo[i], this$1.animation, 'ease')
+                        : uikitUtil.Promise.resolve(); }
+                ).concat(uikitUtil.Transition.start(this.target, {height: newHeight}, this.animation, 'ease'))).then(function () {
                     children.forEach(function (el, i) { return uikitUtil.css(el, {display: propsTo[i].opacity === 0 ? 'none' : '', zIndex: ''}); });
                     reset(this$1.target);
-                    this$1.$update(this$1.target, 'resize');
+                    this$1.$update(this$1.target);
                     uikitUtil.fastdom.flush(); // needed for IE11
                 }, uikitUtil.noop);
 
@@ -134,12 +133,13 @@
     }
 
     function getPositionWithMargin(el) {
-        var ref = uikitUtil.offset(el);
+        var ref = el.getBoundingClientRect();
         var height = ref.height;
         var width = ref.width;
         var ref$1 = uikitUtil.position(el);
         var top = ref$1.top;
         var left = ref$1.left;
+        top += uikitUtil.toFloat(uikitUtil.css(el, 'marginTop'));
 
         return {top: top, left: left, height: height, width: width};
     }
@@ -147,13 +147,12 @@
     var style;
 
     function addStyle() {
-        if (style) {
-            return;
+        if (!style) {
+            style = uikitUtil.append(document.head, '<style>').sheet;
+            style.insertRule(
+                ("." + targetClass + " > * {\n                    margin-top: 0 !important;\n                    transform: none !important;\n                }"), 0
+            );
         }
-        style = uikitUtil.append(document.head, '<style>').sheet;
-        style.insertRule(
-            ("." + targetClass + " > * {\n            margin-top: 0 !important;\n            transform: none !important;\n        }"), 0
-        );
     }
 
     var Component = {
@@ -186,19 +185,8 @@
                 },
 
                 watch: function() {
-                    var this$1 = this;
-
-
                     this.updateState();
-
-                    if (this.selActive !== false) {
-                        var actives = uikitUtil.$$(this.selActive, this.$el);
-                        this.toggles.forEach(function (el) { return uikitUtil.toggleClass(el, this$1.cls, uikitUtil.includes(actives, el)); });
-                    }
-
-                },
-
-                immediate: true
+                }
 
             },
 
@@ -211,7 +199,7 @@
             children: {
 
                 get: function() {
-                    return uikitUtil.children(this.target);
+                    return uikitUtil.toNodes(this.target.children);
                 },
 
                 watch: function(list, old) {
@@ -244,6 +232,20 @@
 
         ],
 
+        connected: function() {
+            var this$1 = this;
+
+
+            this.updateState();
+
+            if (this.selActive === false) {
+                return;
+            }
+
+            var actives = uikitUtil.$$(this.selActive, this.$el);
+            this.toggles.forEach(function (el) { return uikitUtil.toggleClass(el, this$1.cls, uikitUtil.includes(actives, el)); });
+        },
+
         methods: {
 
             apply: function(el) {
@@ -270,7 +272,7 @@
                 var ref = this;
                 var children = ref.children;
 
-                this.toggles.forEach(function (el) { return uikitUtil.toggleClass(el, this$1.cls, !!matchFilter(el, this$1.attrItem, state)); });
+                this.toggles.forEach(function (el) { return uikitUtil.toggleClass(el, this$1.cls, matchFilter(el, this$1.attrItem, state)); });
 
                 var apply = function () {
 
@@ -316,37 +318,28 @@
 
     function mergeState(el, attr, state) {
 
-        var filterBy = getFilter(el, attr);
-        var filter = filterBy.filter;
-        var group = filterBy.group;
-        var sort = filterBy.sort;
-        var order = filterBy.order; if ( order === void 0 ) order = 'asc';
+        uikitUtil.toNodes(el).forEach(function (el) {
+            var filterBy = getFilter(el, attr);
+            var filter = filterBy.filter;
+            var group = filterBy.group;
+            var sort = filterBy.sort;
+            var order = filterBy.order; if ( order === void 0 ) order = 'asc';
 
-        if (filter || uikitUtil.isUndefined(sort)) {
+            if (filter || uikitUtil.isUndefined(sort)) {
 
-            if (group) {
-
-                if (filter) {
+                if (group) {
                     delete state.filter[''];
                     state.filter[group] = filter;
                 } else {
-                    delete state.filter[group];
-
-                    if (uikitUtil.isEmpty(state.filter) || '' in state.filter) {
-                        state.filter = {'': filter || ''};
-                    }
-
+                    state.filter = {'': filter || ''};
                 }
 
-            } else {
-                state.filter = {'': filter || ''};
             }
 
-        }
-
-        if (!uikitUtil.isUndefined(sort)) {
-            state.sort = [sort, order];
-        }
+            if (!uikitUtil.isUndefined(sort)) {
+                state.sort = [sort, order];
+            }
+        });
 
         return state;
     }
@@ -359,15 +352,16 @@
 
 
         var ref$1 = getFilter(el, attr);
-        var filter = ref$1.filter; if ( filter === void 0 ) filter = '';
+        var filter = ref$1.filter;
         var group = ref$1.group; if ( group === void 0 ) group = '';
         var sort = ref$1.sort;
         var order = ref$1.order; if ( order === void 0 ) order = 'asc';
 
-        return uikitUtil.isUndefined(sort)
-            ? group in stateFilter && filter === stateFilter[group]
-                || !filter && group && !(group in stateFilter) && !stateFilter['']
-            : stateSort === sort && stateOrder === order;
+        filter = uikitUtil.isUndefined(sort) ? filter || '' : filter;
+        sort = uikitUtil.isUndefined(filter) ? sort || '' : sort;
+
+        return (uikitUtil.isUndefined(filter) || group in stateFilter && filter === stateFilter[group])
+            && (uikitUtil.isUndefined(sort) || stateSort === sort && stateOrder === order);
     }
 
     function isEqualList(listA, listB) {
@@ -387,10 +381,12 @@
         return uikitUtil.assign([], nodes).sort(function (a, b) { return uikitUtil.data(a, sort).localeCompare(uikitUtil.data(b, sort), undefined, {numeric: true}) * (order === 'asc' || -1); });
     }
 
+    /* global UIkit, 'filter' */
+
     if (typeof window !== 'undefined' && window.UIkit) {
         window.UIkit.component('filter', Component);
     }
 
     return Component;
 
-})));
+}));

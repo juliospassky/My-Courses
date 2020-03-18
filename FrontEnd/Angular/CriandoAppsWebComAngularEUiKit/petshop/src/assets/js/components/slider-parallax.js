@@ -1,10 +1,10 @@
-/*! UIkit 3.3.6 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
+/*! UIkit 3.0.3 | http://www.getuikit.com | (c) 2014 - 2018 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('uikit-util')) :
     typeof define === 'function' && define.amd ? define('uikitslider_parallax', ['uikit-util'], factory) :
     (global = global || self, global.UIkitSlider_parallax = factory(global.UIkit.util));
-}(this, (function (uikitUtil) { 'use strict';
+}(this, function (uikitUtil) { 'use strict';
 
     var Media = {
 
@@ -42,13 +42,9 @@
     }
 
     function getMaxPathLength(el) {
-        return Math.ceil(Math.max.apply(Math, [ 0 ].concat( uikitUtil.$$('[stroke]', el).map(function (stroke) {
-            try {
-                return stroke.getTotalLength();
-            } catch (e) {
-                return 0;
-            }
-        }) )));
+        return Math.ceil(uikitUtil.$$('*', el).concat(el).reduce(function (length, stroke) { return stroke.getTotalLength
+            ? Math.max(length, stroke.getTotalLength())
+            : length; }, 0));
     }
 
     var props = ['x', 'y', 'bgx', 'bgy', 'rotate', 'scale', 'color', 'backgroundColor', 'borderColor', 'opacity', 'blur', 'hue', 'grayscale', 'invert', 'saturate', 'sepia', 'fopacity', 'stroke'];
@@ -97,7 +93,7 @@
                                 : 0) || 0);
                     }
 
-                    var unit = getUnit(steps);
+                    var unit = getUnit(steps, prop);
 
                     if (isColor) {
 
@@ -139,18 +135,12 @@
 
                     if (prop === 'stroke') {
 
-                        if (!steps.some(function (step) { return step; })) {
-                            return props;
-                        }
-
                         var length = getMaxPathLength(this$1.$el);
                         uikitUtil.css($el, 'strokeDasharray', length);
 
                         if (unit === '%') {
                             steps = steps.map(function (step) { return step * length / 100; });
                         }
-
-                        steps = steps.reverse();
 
                         prop = 'strokeDashoffset';
                     }
@@ -200,7 +190,7 @@
                         data.image = img;
 
                         if (!img.naturalWidth) {
-                            img.onload = function () { return this$1.$update(); };
+                            img.onload = function () { return this$1.$emit(); };
                         }
                     }
 
@@ -282,6 +272,8 @@
 
                 var ref = this;
                 var props = ref.props;
+                var translated = false;
+
                 return Object.keys(props).reduce(function (css, prop) {
 
                     var ref = props[prop];
@@ -295,8 +287,23 @@
                         // transforms
                         case 'x':
                         case 'y': {
+
+                            if (translated) {
+                                break;
+                            }
+
                             unit = unit || 'px';
-                            css.transform += " translate" + (uikitUtil.ucfirst(prop)) + "(" + (uikitUtil.toFloat(value).toFixed(unit === 'px' ? 0 : 2)) + unit + ")";
+
+                            var ref$1 = ['x', 'y'].map(function (dir) { return prop === dir
+                                ? uikitUtil.toFloat(value).toFixed(unit === 'px' ? 0 : 2) + unit
+                                : props[dir]
+                                    ? getValue(props[dir].steps, percent, 1) + props[dir].unit
+                                    : 0; }
+                            );
+                            var x = ref$1[0];
+                            var y = ref$1[1];
+
+                            translated = css.transform += " translate3d(" + x + ", " + y + ", 0)";
                             break;
                         }
                         case 'rotate':
@@ -318,10 +325,10 @@
                         case 'backgroundColor':
                         case 'borderColor': {
 
-                            var ref$1 = getStep(steps, percent);
-                            var start = ref$1[0];
-                            var end = ref$1[1];
-                            var p = ref$1[2];
+                            var ref$2 = getStep(steps, percent);
+                            var start = ref$2[0];
+                            var end = ref$2[1];
+                            var p = ref$2[2];
 
                             css[prop] = "rgba(" + (start.map(function (value, i) {
                                     value = value + p * (end[i] - value);
@@ -530,10 +537,12 @@
                 : percent;
     }
 
+    /* global UIkit, 'sliderParallax' */
+
     if (typeof window !== 'undefined' && window.UIkit) {
         window.UIkit.component('sliderParallax', Component);
     }
 
     return Component;
 
-})));
+}));
