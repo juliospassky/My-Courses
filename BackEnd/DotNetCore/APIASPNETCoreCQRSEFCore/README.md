@@ -1,7 +1,7 @@
 # GTSharp
 ## EF comandos
 
-Lembrar de alterar no kitematic, na aba, Hostname/Ports o published ip:port para 1433
+Lembrar de alterar no kitematic (na aba Hostname/Ports) o published ip:port para 1433
 
 Instala o EFCore
 ```sh
