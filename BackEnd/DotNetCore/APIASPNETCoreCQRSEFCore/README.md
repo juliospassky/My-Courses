@@ -15,3 +15,11 @@ EFCore Atualizar banco
 ```sh
 dotnet ef database update  --startup-project ..\GTSharp.Domain.Api\  
 ```
+
+## EF DataAnnotation
+Caso for usar o EF com DataAnnotation deve instalar o pacote
+
+Add Pacote DataAnnotation
+```sh
+dotnet add package System.ComponentModel.Annotations
+```
