@@ -39,8 +39,11 @@
  ```sh
   npm install --save toastr
   ```
-  
-## Dicas
+## Dicas Uikit
+Modificar variaveis no arquivo (uikit\src\less\theme\variables.less)
+
+
+## Dicas Angular
 No verbo Get evita-se o subscribe que mantem a requisição bloqueada durante o seu processamento. Recomenda-se então o uso do Observable que trabalha de forma assincrona, por convenção usa-se $ no final da declaração da variável. Verificar arquivo products-page.component.ts para exemplo.
 
 O armazenamento do Token, pode ser feito de três formas: variável global; session storage e local storage. A forma mais recomendada é com local storage, pois o browse armazena esse token internamente. Verificar arquivo login.page.components.ts
