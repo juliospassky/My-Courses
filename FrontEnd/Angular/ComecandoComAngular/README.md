@@ -15,6 +15,11 @@ ng new projectName
 ng serve
 ```
 
+- Caso o sistema não permita executar o ng serve
+```sh
+Set-ExecutionPolicy RemoteSigned
+```
+
 - Build para produção
 ```sh
 ng build --prod
