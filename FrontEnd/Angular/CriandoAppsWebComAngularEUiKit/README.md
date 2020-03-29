@@ -16,10 +16,15 @@
   ```sh
   npm install --save-dev @angular-devkit/build-angular
   ``` 
+  - Instala dependencias do yarn (Na pasta do projeto)
+  ```sh  
+  yarn
+  ```
   - Compilar o uikit modificado
-  ```sh
+  ```sh  
   yarn compile
   ```
+  
   
 ## Comandos
  - Gera um novo componente Navbar
