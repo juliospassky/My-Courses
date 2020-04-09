@@ -4,5 +4,5 @@
 
 Firebase
 ```sh
-ng add @angular/fire@next
+ng add @angular/fire
 ```
