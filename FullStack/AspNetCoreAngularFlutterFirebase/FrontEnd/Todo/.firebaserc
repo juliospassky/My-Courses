@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todo-d3771": {
+      "hosting": {
+        "Todo": [
+          "todo-d3771"
+        ]
+      }
+    }
+  }
+}
