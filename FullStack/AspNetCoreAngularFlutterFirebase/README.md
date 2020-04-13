@@ -6,3 +6,7 @@ Firebase
 ```sh
 ng add @angular/fire
 ```
+
+```sh
+npm i --save firebase
+```
