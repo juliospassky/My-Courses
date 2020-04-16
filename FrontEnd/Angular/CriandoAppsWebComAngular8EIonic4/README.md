@@ -10,6 +10,11 @@ npm install -g ionic
 ionic start eshop blank
 ```
 
+# Criar paginas
+```sh
+ionic generate page pages/account/login
+```
+
 # Executar o projeto
 ```sh
 ionic server
