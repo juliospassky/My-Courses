@@ -5,7 +5,12 @@
 npm install -g ionic
 ```
 
-#Criar o projeto
+# Criar o projeto
 ```sh
 ionic start eshop blank
+```
+
+# Executar o projeto
+```sh
+ionic server
 ```
