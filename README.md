@@ -17,14 +17,12 @@
 - Angular
   - [Começando com Angular](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjNmIyY2MyZTcxNzlhMjdlYjYyYmFlMA==)
   - [Criando Apps Web com Angular e UiKit](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkNDkzYTBjN2MyMTNlNjBiOGViZjVlZg==)
-## Full
-
+## FullStack
+  - [Criando um TodoApp com ASP.NET Core, Firebase, Angular e Flutter](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVlODQ5N2EwZTcxNzlhMTdlMjFmMzU0Ng==) 
 ## Languages
 - C#
   - [Introdução ao C# e Imersão ao .NET Framework](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjMzM2NjRlZTcxNzlhN2QxMjQwNThlYg==)
   - [Dominando Linq e Lambda Expressions com C#](https://www.udemy.com/certificate/UC-6UW74B8D/)
-## Machine Learning
-- [Gym](https://gym.openai.com)
 ## Tests
 - Testes de unidade
   - [Refatorando para testes de unidade](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkMDgxMzYyZmI2ZmMwMGU3OWFiOGE5Yg==)
@@ -36,3 +34,4 @@
 ## Machine Learning
 - Linear Regression
   - [Machine Learning Foundations: A Case Study Approach](https://www.coursera.org/account/accomplishments/records/U5WSNNUJWEC7)
+  - [Gym](https://gym.openai.com)
