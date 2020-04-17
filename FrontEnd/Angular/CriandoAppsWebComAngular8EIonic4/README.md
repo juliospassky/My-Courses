@@ -5,7 +5,27 @@
 npm install -g ionic
 ```
 
-#Criar o projeto
+# Criar o projeto
 ```sh
 ionic start eshop blank
+```
+
+# Criar paginas
+```sh
+ionic generate page pages/account/login
+```
+
+# Criar modules (Para importar módulos ao invés de componentes)
+```sh
+ionic generate module components
+```
+
+# Criar components
+```sh
+ionic generate component components/loading
+```
+
+# Executar o projeto
+```sh
+ionic server
 ```
