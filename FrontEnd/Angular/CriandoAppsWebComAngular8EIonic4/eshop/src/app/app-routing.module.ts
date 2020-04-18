@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { FramePage } from './pages/shared/frame/frame.page';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule) },
+  { path: 'login', loadChildren: './pages/account/login/login.module#LoginPageModule' },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/account/login/login.module').then(m => m.LoginPageModule)
-  },
-];
+    path: '',
+    component: FramePage,
+    children: [
+      { path: '', loadChildren: './pages/home/home.module#HomePageModule' },
+    ]
+  }];
 
 @NgModule({
   imports: [
