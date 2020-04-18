@@ -29,3 +29,8 @@ ionic generate component components/loading
 ```sh
 ionic server
 ```
+
+# Build do projeto
+```sh
+ionic build --prod
+```
