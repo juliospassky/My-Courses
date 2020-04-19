@@ -8,5 +8,5 @@ npm install @ngrx/store --save
 ```
 Instala o ng
 ```sh
-ng install @ngrx/store --save
+ng add @ngrx/store --save
 ```
