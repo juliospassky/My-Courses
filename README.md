@@ -18,6 +18,7 @@
   - [Começando com Angular](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjNmIyY2MyZTcxNzlhMjdlYjYyYmFlMA==)
   - [Criando Apps Web com Angular e UiKit](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkNDkzYTBjN2MyMTNlNjBiOGViZjVlZg==)
   - [Criando Apps Web com Angular 8 e Ionic 4](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkNTQ4YjMyZTcxNzlhMDg0ZWVlYzU3ZA==)
+  - [Criando Apps Web com Angular e Redux](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkOTJlN2NlZTcxNzlhMDIyNDQ0ZmU0OQ==)
 ## FullStack
   - [Criando um TodoApp com ASP.NET Core, Firebase, Angular e Flutter](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVlODQ5N2EwZTcxNzlhMTdlMjFmMzU0Ng==) 
 ## Languages
