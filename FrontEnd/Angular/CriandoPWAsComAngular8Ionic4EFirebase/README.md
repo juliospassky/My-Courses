@@ -8,3 +8,8 @@ ionic start juliogram blank
 ```sh
 npm install firebase @angular/fire --save
 ```
+
+# Criar paginas
+```sh
+ionic generate page pages/take-photo
+```
