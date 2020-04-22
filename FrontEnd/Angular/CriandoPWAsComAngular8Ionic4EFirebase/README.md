@@ -4,3 +4,7 @@
 ```sh
 ionic start juliogram blank
 ```
+
+```sh
+npm install firebase @angular/fire --save
+```
