@@ -6,6 +6,8 @@
   - [Criando APIs Data Driven com ASP.NET Core 3 e EF Core 3](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVkZDUzMTZlN2MyMTNlNTYyNTE2YzI0OQ==)
   - [API com ASP.NET Core, CQRS e EF Core](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVlMjYxYmNiZTcxNzlhMmYwMTEwYTUxMQ==)
   - [Criando Apis robustas em C#](https://www.udemy.com/certificate/UC-FCLPCM4D/)
+- Spring Boot
+  - [API RESTful com SpringBoot](https://www.udemy.com/certificate/UC-16a0d504-8abf-439c-9f89-b82aa5b5df74/)
 - Docker
   - [Docker: Ferramenta essencial para Desenvolvedores](https://www.udemy.com/certificate/UC-U3ENTBUZ/)
 - OOP Specialization
@@ -13,6 +15,8 @@
   - [Desenvolvimento Ágil com Java Avançado](https://www.coursera.org/account/accomplishments/records/6EBBE7TSJC69)
   - [Princípios de Desenvolvimento Ágil de Software](https://www.coursera.org/account/accomplishments/records/KG7NAU768VNL)
   - [TDD – Desenvolvimento de software guiado por testes](https://www.coursera.org/account/accomplishments/records/9LDAY82Z4RFT)
+- Elastic Search
+  - [Workshop Elasticsearch e a stack Elastic](https://www.udemy.com/certificate/UC-16a0d504-8abf-439c-9f89-b82aa5b5df74/)
 ## Front-end
 - Angular
   - [Começando com Angular](https://certificates.balta.io/NWNiNTMwM2I2MzNkNDIyM2Y0MDM2MDI2LDVjNmIyY2MyZTcxNzlhMjdlYjYyYmFlMA==)
@@ -32,6 +36,10 @@
 ## Version Control
 - Git
   - [Dominando Git e GitHub - Do iniciante ao expert](https://www.udemy.com/certificate/UC-IJCCMQ88/)
+## LGPD
+- lgpd
+  - [Privacidade e Lei Geral de Proteção de Dados - Módulo I - Básico](https://sensedia.thinkific.com/certificates/b2itx3zmzf)
+  - [Privacidade e Lei Geral de Proteção de Dados - Módulo II - Avançado](https://sensedia.thinkific.com/certificates/sfl4gxwdwg)
 ## Soft Skills
  - [Creativity, Innovation, and Change](https://www.coursera.org/account/accomplishments/records/ANRFJHRHN7FE)
 ## Machine Learning
