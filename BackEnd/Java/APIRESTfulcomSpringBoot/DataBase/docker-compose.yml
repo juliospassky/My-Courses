@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+  mysql_db:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=Carros
+      - MYSQL_USER=sa
+      - MYSQL_PASSWORD=password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+volumes:
+  mysql_data:
+    driver: local
