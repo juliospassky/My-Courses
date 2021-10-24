@@ -1,11 +1,13 @@
 ﻿using NerdStore.Core.DomainObjects;
+using System.Collections.Generic;
 
 namespace NerdStore.Catalogo.Domain
 {
     public class Categoria : Entity
     {
         public string Nome { get; set; }
-        public string Codigo { get; set; }
+        public int Codigo { get; set; }
+        public ICollection<Produto> Produtos { get; set; }
 
         public Categoria(string nome, string codigo)
         {
@@ -14,6 +16,8 @@ namespace NerdStore.Catalogo.Domain
 
             Validar();
         }
+
+        protected Categoria() { }
 
         public void Validar()
         {
